@@ -1,5 +1,6 @@
-import re, requests
+import re, requests, csv, time
 
+teams = []
 for group in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']:
     r = requests.get("http://www.oddschecker.com/football/champions-league/champions-league-group-%s/winner" % group,
                      cookies={"odds_type":"decimal"})
@@ -19,3 +20,11 @@ for group in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']:
             else:     odds.append(float(c))
         assert len(odds) == len(sites)
         print name, odds
+        teams.append([name, group] + odds)
+
+t = str(time.time()).split(".")[0]
+with file("raw/odds%s.csv" % t, 'w') as outfile:
+    w = csv.writer(outfile)
+    w.writerow(['name', 'group'] + sites)
+    for row in teams:
+        w.writerow(row)
