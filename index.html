@@ -56,8 +56,7 @@ d3.csv("summary.csv", function(error, csv) {
       .attr("x2", width)
       .attr("y1", function(d) { return height - y(d); })
       .attr("y2", function(d) { return height - y(d); })
-      .style("stroke", "#eee")
-      .style("font", "12px sans-serif");
+      .style("stroke", "#f6f6f6");
 
   // y axis labels
   chart.selectAll(".yaxislabel")
@@ -68,8 +67,8 @@ d3.csv("summary.csv", function(error, csv) {
       .attr("y", function(d) { return height - y(d); })
       .attr("dx", -10)
       .attr("text-anchor", "middle")
-      .style("font", "10px sans-serif")
       .style("fill", "#ccc")
+      .style("font", "10px sans-serif")
       .text(String);
 
   // x axis labels
@@ -80,6 +79,7 @@ d3.csv("summary.csv", function(error, csv) {
       .attr("x", function(d) { return x(d) + x.rangeBand()/2; })
       .attr("y", function() { return my-10; })
       .attr("text-anchor", "middle")
+      .style("font", "12px sans-serif")
       .text(String);
 
   chart.selectAll(".teamname")
@@ -90,5 +90,6 @@ d3.csv("summary.csv", function(error, csv) {
       .attr("y", function(d) { return height - y(d.pct); })
       .attr("text-anchor", "middle")
       .text(function(d) { return d.name; })
+      .style("font", "12px sans-serif");
 });
 </script>
