@@ -53,13 +53,13 @@ d3.csv("summary.csv", function(error, csv) {
       .domain(groups)
       .rangeBands([0, width])
 
-  var y = d3.scale.log()
-    .domain([1, 100])
+  var y = d3.scale.sqrt()
+    .domain([0, 100])
     .range([0, height])
 
   // y axis ticks
   chart.selectAll(".yaxistick")
-      .data(y.ticks(10))
+      .data(y.ticks(10).slice(0,10)) //omit 100
     .enter().append("line")
       .attr("class", "yaxistick")
       .attr("x1", 0)
@@ -72,13 +72,13 @@ d3.csv("summary.csv", function(error, csv) {
   //chart.append("line")
   //    .attr("x1", 0)
   //    .attr("x2", width)
-  //    .attr("y1", height)
-  //    .attr("y2", height)
+  //    .attr("y1", my-5)
+  //    .attr("y2", my-5)
   //    .style("stroke", "#000")
 
   // y axis labels
   chart.selectAll(".yaxislabel")
-      .data(y.ticks(8))
+      .data(y.ticks(10).slice(0,10)) //omit 100
     .enter().append("text")
       .attr("class", "yaxislabel")
       .attr("x", 0)
@@ -93,7 +93,7 @@ d3.csv("summary.csv", function(error, csv) {
     .enter().append("text")
       .attr("class", "xaxislabel")
       .attr("x", function(d) { return x(d) + x.rangeBand()/2; })
-      .attr("y", function() { return height + my; })
+      .attr("y", function() { return my-10; })
       .attr("text-anchor", "middle")
       .text(String);
 
