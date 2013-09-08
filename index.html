@@ -62,46 +62,68 @@ d3.csv("champsleague.csv", function(error, csv) {
     //TODO: 25th and 75th
     data.push(row);
 
-    if (row.max > globalmax) globalmax = row.max;
-    if (row.min < globalmin) globalmin = row.min;
+    if (row.median > globalmax) globalmax = row.median;
+    if (row.median < globalmin) globalmin = row.median;
   });
   console.log(data, globalmin, globalmax);
 
+  var groups = ["A", "B", "C", "D", "E", "F", "G", "H"]
+
   var x = d3.scale.ordinal()
-      .domain(["A", "B", "C", "D", "E", "F", "G", "H"])
+      .domain(groups)
       .rangeBands([0, width])
 
-  var y = d3.scale.linear()
-    .domain([globalmin, globalmax])
+  var y = d3.scale.log()
+    .domain([1, 100])
     .range([0, height])
 
   // y axis ticks
-  chart.selectAll("line")
+  chart.selectAll(".yaxistick")
       .data(y.ticks(10))
     .enter().append("line")
+      .attr("class", "yaxistick")
       .attr("x1", 0)
       .attr("x2", width)
-      .attr("y1", function(d) { return height - y(d) })
-      .attr("y2", function(d) { return height - y(d) })
+      .attr("y1", function(d) { return height - y(d); })
+      .attr("y2", function(d) { return height - y(d); })
       .style("stroke", "#ccc")
+
+  // black baseline
+  chart.append("line")
+      .attr("x1", 0)
+      .attr("x2", width)
+      .attr("y1", height)
+      .attr("y2", height)
+      .style("stroke", "#000")
 
   // y axis labels
   chart.selectAll(".yaxislabel")
-      .data(y.ticks(10))
+      .data(y.ticks(8))
     .enter().append("text")
       .attr("class", "yaxislabel")
       .attr("x", 0)
-      .attr("y", function(d) { return height - y(d) })
+      .attr("y", function(d) { return height - y(d); })
       .attr("dx", -10)
       .attr("text-anchor", "middle")
       .text(String);
 
-  // data points
-  chart.selectAll("circle")
+  // x axis labels
+  chart.selectAll(".xaxislabel")
+      .data(groups)
+    .enter().append("text")
+      .attr("class", "xaxislabel")
+      .attr("x", function(d) { return x(d) + x.rangeBand()/2; })
+      .attr("y", function() { return height + my; })
+      .attr("text-anchor", "middle")
+      .text(String);
+
+  chart.selectAll(".teamname")
       .data(data)
-    .enter().append("circle")
-      .attr("cx", function(d) { return x(d.group); })
-      .attr("cy", function(d) { return height - y(d.median); })
-      .attr("r", 5)
+    .enter().append("text")
+      .attr("class", "teamname")
+      .attr("x", function(d) { return x(d.group) + x.rangeBand()/2; })
+      .attr("y", function(d) { return height - y(d.median); })
+      .attr("text-anchor", "middle")
+      .text(function(d) { return d.team; })
 });
 </script>
