@@ -32,7 +32,7 @@ var chart = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + mx + "," + my + ")");
 
-d3.csv("champsleague.csv", function(error, csv) {
+d3.csv("summary.csv", function(error, csv) {
   var data = [];
 
   csv.forEach(function(row) {
@@ -40,6 +40,7 @@ d3.csv("champsleague.csv", function(error, csv) {
     row.max = parseFloat(row.max);
     row.mean = parseFloat(row.mean);
     row.median = parseFloat(row.median);
+    row.group = row.group.toUpperCase();
     row.pct = 100/row.median;
     //TODO: 25th and 75th
     data.push(row);
@@ -68,12 +69,12 @@ d3.csv("champsleague.csv", function(error, csv) {
       .style("stroke", "#eee")
 
   // black baseline
-  chart.append("line")
-      .attr("x1", 0)
-      .attr("x2", width)
-      .attr("y1", height)
-      .attr("y2", height)
-      .style("stroke", "#000")
+  //chart.append("line")
+  //    .attr("x1", 0)
+  //    .attr("x2", width)
+  //    .attr("y1", height)
+  //    .attr("y2", height)
+  //    .style("stroke", "#000")
 
   // y axis labels
   chart.selectAll(".yaxislabel")
@@ -103,6 +104,6 @@ d3.csv("champsleague.csv", function(error, csv) {
       .attr("x", function(d) { return x(d.group) + x.rangeBand()/2; })
       .attr("y", function(d) { return height - y(d.pct); })
       .attr("text-anchor", "middle")
-      .text(function(d) { return d.team; })
+      .text(function(d) { return d.name; })
 });
 </script>
