@@ -1,19 +1,9 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
-.chart {
-    font: 12px sans-serif;
-}
-
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-
-.yaxislabel {
-    font: 10px sans-serif;
-    fill: #ccc;
-}
-
 </style>
 <body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -67,14 +57,7 @@ d3.csv("summary.csv", function(error, csv) {
       .attr("y1", function(d) { return height - y(d); })
       .attr("y2", function(d) { return height - y(d); })
       .style("stroke", "#eee")
-
-  // black baseline
-  //chart.append("line")
-  //    .attr("x1", 0)
-  //    .attr("x2", width)
-  //    .attr("y1", my-5)
-  //    .attr("y2", my-5)
-  //    .style("stroke", "#000")
+      .style("font", "12px sans-serif");
 
   // y axis labels
   chart.selectAll(".yaxislabel")
@@ -85,6 +68,8 @@ d3.csv("summary.csv", function(error, csv) {
       .attr("y", function(d) { return height - y(d); })
       .attr("dx", -10)
       .attr("text-anchor", "middle")
+      .style("font", "10px sans-serif")
+      .style("fill", "#ccc")
       .text(String);
 
   // x axis labels
