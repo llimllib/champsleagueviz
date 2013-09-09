@@ -82,14 +82,21 @@ d3.csv("summary.csv", function(error, csv) {
       .style("font", "12px sans-serif")
       .text(String);
 
-  chart.selectAll(".teamname")
+  function sanitize(x) {
+    return x.replace(/ /g, "").toLowerCase() + ".png";
+  }
+
+  var imgsize = 50;
+
+  chart.selectAll("image")
       .data(data)
-    .enter().append("text")
-      .attr("class", "teamname")
-      .attr("x", function(d) { return x(d.group) + x.rangeBand()/2; })
-      .attr("y", function(d) { return height - y(d.pct); })
-      .attr("text-anchor", "middle")
-      .text(function(d) { return d.name; })
-      .style("font", "12px sans-serif");
+    .enter().append("svg:image")
+      .attr("x", function(d) { return x(d.group) + x.rangeBand()/2 - (imgsize/2); })
+      .attr("y", function(d) { return height - y(d.pct) - (imgsize/2); })
+      .attr("width", imgsize)
+      .attr("height", imgsize)
+      .attr("xlink:href", function(d) { return "crests/" + sanitize(d.name); })
+      .append("svg:title")
+        .text(function(d) { return d.name; });
 });
 </script>
