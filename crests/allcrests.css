@@ -1,0 +1,1243 @@
+#siteTable a.title{vertical-align:middle;line-height:22px}
+#siteTable .compressed .title{margin-top:0}
+#siteTable a.title[href*="/pre_match_thread"],#siteTable a.title[href*="/prematch_thread"],#siteTable a.title[href*="/match_thread"],#siteTable a.title[href*="/matchthread"],#siteTable a.title[href*="/post_match_thread"],#siteTable a.title[href*="/postmatch_thread"],#siteTable a.title[href*="/match_report"],#siteTable a.title[href*="/league_roundup"],#siteTable a.title[href*="/league_round_up"]{line-height:26px;color:green}
+#siteTable a.title[href*="/pre_match_thread"]:before,#siteTable a.title[href*="/prematch_thread"]:before,#siteTable a.title[href*="/match_thread"]:before,#siteTable a.title[href*="/matchthread"]:before,#siteTable a.title[href*="/post_match_thread"]:before,#siteTable a.title[href*="/postmatch_thread"]:before,#siteTable a.title[href*="/match_report"]:before,#siteTable a.title[href*="/league_roundup"]:before,#siteTable a.title[href*="/league_round_up"]:before{content:"";display:inline-block;width:24px;height:24px;margin-right:3px;background-image:url(http://e.thumbs.redditmedia.com/3y0DLRokzxq3zt0d.png);background-position:0 -204px;background-repeat:no-repeat;vertical-align:bottom}
+#siteTable a.title[href*="/match_thread"]:before,#siteTable a.title[href*="/matchthread"]:before{background-position:0 0}
+#siteTable a.title[href*="/pre_match_thread"]:before,#siteTable a.title[href*="/prematch_thread"]:before{background-position:0 -34px}
+#siteTable a.title[href*="/post_match_thread"]:before,#siteTable a.title[href*="/postmatch_thread"]:before{background-position:0 -408px}
+#siteTable .linkflair-modded a.title{line-height:26px}
+#siteTable .linkflair-modded .linkflairlabel{width:24px;height:24px;background-image:url(http://a.thumbs.redditmedia.com/0jAi84P03Udq26zZ.png);background-position:0 0;margin-right:3px}
+#siteTable .linkflair-contest a.title{color:green}
+#siteTable .linkflair-contest .linkflairlabel{background-image:url(http://a.thumbs.redditmedia.com/0jAi84P03Udq26zZ.png)}
+#siteTable .linkflair-star .linkflairlabel{background-image:url(http://c.thumbs.redditmedia.com/uyR_gNXCRoDxkh82.png)}
+#siteTable .linkflair-false .linkflairlabel{display:none;background-image:none}
+#siteTable .flairselector .linkflairlabel{display:inline-block}
+#siteTable .linkflair-false a.title{text-decoration:line-through}
+#newlink .infobar{background-color:transparent;padding:0;font-size:0;border:0}
+#newlink .infobar:after{background-color:rgb(40,128,40);color:white!important;padding:10px;font-size:12pt;font-weight:bold;display:block;text-align:center;border-radius:4px}
+#link-desc:after{content:"Please read and understand the submission guidelines before submitting a post"}
+a[href^="//#"]{display:inline-block;width:16px;height:16px;line-height:normal;background-repeat:no-repeat;background-image:url(http://d.thumbs.redditmedia.com/y02e-sAAH6ATDDxc.png);background-position:-999px -999px;vertical-align:middle;padding:0;border-width:0;background-color:transparent;cursor:default}
+a[href^="//#"][href$="-big"]{width:24px;height:24px;line-height:24px;background-image:url(http://e.thumbs.redditmedia.com/3y0DLRokzxq3zt0d.png)}
+.comment a[href^="//#"]{display:none!important}
+a[href^="//#ball"]{background-position:0 0}
+a[href^="//#clock"]{background-position:0 -34px}
+a[href^="//#down"]{background-position:0 -68px}
+a[href^="//#flag"]{background-position:0 -102px}
+a[href^="//#info"]{background-position:0 -136px}
+a[href^="//#net"]{background-position:0 -170px}
+a[href^="//#news"]{background-position:0 -204px}
+a[href^="//#notes"]{background-position:0 -238px}
+a[href^="//#red"]{background-position:0 -272px}
+a[href^="//#stream"]{background-position:0 -306px}
+a[href^="//#sub"]{background-position:0 -340px}
+a[href^="//#up"]{background-position:0 -374px}
+a[href^="//#whistle"]{background-position:0 -408px}
+a[href^="//#yellow"]{background-position:0 -442px}
+.titlebox a[href="//#redditch"]{width:20px;height:20px;line-height:20px;background-position:0 0;background-image:url(http://b.thumbs.redditmedia.com/QobB6hY_65VHzKTa.png)}
+.md a[href*="youtube.com/watch"],.md a[href*="youtu.be/"],.md a[href*="vimeo.com/"],.md a[href*="twitvid.com/"],.md a[href*="/video/"],.md a[href*="/videok/"],.md a[href*="/gvideos/"]{background-image:url(http://d.thumbs.redditmedia.com/SUy46U3VxOr-mmy9.png);background-repeat:no-repeat;background-position:left center;padding-left:20px}
+#header-bottom-right{border-top:1px solid #5f99cf;border-left:1px solid #5f99cf}
+html,body{background-color:#fdfefd}
+.side,.icon-menu a{background-color:transparent}
+.sidecontentbox,.footer{background-color:white}
+#header-img{max-width:400px;max-height:160px;width:auto;height:auto;border:1px solid black;margin-left:2px}
+.md table{border:2px solid white;background-color:white;box-shadow:0 0 5px #ccc}
+.md th,.md td{padding:2px 1ex}
+.md th{color:black;background-color:#eee;border-color:#ccc}
+.md td[align=left],.md th[align=left]{text-align:left}
+.md td[align=center],.md th[align=center]{text-align:center}
+.md td[align=right],.md th[align=right]{text-align:right}
+.md th a{color:black}
+.md h1,.md h2,.md h3,.md h4{margin:1em 0;font-weight:bold}
+.side .submit-text{display:none}
+.link .usertext .md{border-color:green}
+.linkinfo{border-color:#0fe72c;background-color:#e7ffe9}
+.linkinfo .downvotes{color:green}
+.titlebox{border:1px solid #5fcf99;background-color:#effff7;padding:1ex;border-radius:3px}
+.titlebox form.toggle{background-color:transparent}
+.titlebox a{color:green}
+.titlebox .md a{font-weight:bold}
+.side .titlebox h1.redditname{font-size:3em;font-style:italic;border-bottom:1px solid black;margin:0 0 1ex 0;background-color:transparent!important}
+.titlebox h1:before{content:"";background-image:url(http://b.thumbs.redditmedia.com/dfXFs-Sb6GAzbT5y.png);display:inline-block;width:29px;height:40px;margin-right:4px;vertical-align:baseline}
+.titlebox .usertext-body p{margin:1em 0;font-size:inherit}
+.titlebox .usertext-body p:first-child{font-size:larger}
+.subscribers .number{font-style:italic}
+.subscribers .number:before{content:"Attendance: "}
+.users-online{display:inline}
+.users-online:before{display:none}
+.users-online .number{font-style:italic;vertical-align:super;font-size:smaller;color:green}
+.users-online .number:before{content:"("}
+.users-online .number:after{content:")"}
+.titlebox .word{display:none}
+.titlebox li{list-style-type:square;line-height:1.6}
+.leavemoderator{background-color:transparent}
+.titlebox a[href="http://twitter.com/redditsoccer"]{display:inline-block;width:68px;height:16px;background-image:url(http://f.thumbs.redditmedia.com/6N9wvQuvxZeJzWje.png);background-position:0 0;text-indent:-9999px}
+.comment .author[href$="/user/TweetPoster"]:before{display:inline-block!important;content:"";width:20px;height:20px;display:inline-block;background-repeat:no-repeat;vertical-align:middle;margin-right:4px;background-image:url(http://f.thumbs.redditmedia.com/VE2iy7gFw1wDN9_S.png)}
+.redditname{text-transform:capitalize;font-variant:normal}
+.redditname a:before{content:"/r/";text-transform:lowercase}
+.thing.spam{background-color:#fcc}
+.pagename a{background-color:#fdfefd;color:#369;padding:2px 6px 0 6px;font-family:inherit;font-size:12px}
+.md blockquote{color:#334;border-left:1em solid #ccd;padding-left:1ex;margin:1em 0}
+.md blockquote blockquote{color:#343;border-color:#cdc}
+.md blockquote blockquote blockquote{color:#433;border-color:#dcc}
+form+.sitetable>.link{margin-bottom:1em}
+form+.sitetable .rank{margin-top:0}
+.md ol{margin:1em 3em}
+.md ul{margin:1em 2em}
+.footer-parent{padding-bottom:80px;background-image:url(http://c.thumbs.redditmedia.com/PRt4L4r5JIDNKdF8.png);background-repeat:no-repeat;background-position:center bottom}
+.debuginfo{display:none}
+a:link:hover,a:visited:hover,#siteTable a:hover{color:darkred!important;background-color:#ffc!important;text-decoration:none!important}
+.fancy-toggle-button a:hover{color:white!important}
+#header-img-a,.morelink a:hover,.sidebox a:hover,#siteTable a[href^="//#"]:hover{color:white!important;background-color:transparent!important}
+.redditname a{float:none!important}
+.expando-button{cursor:pointer}
+.res-nightmode #siteTable a.title[href*="/daily_fan_thread"],.res-nightmode #siteTable a.title[href*="/match_thread"],.res-nightmode #siteTable a.title[href*="/matchthread"],.res-nightmode #siteTable a.title[href*="/pre_match_thread"],.res-nightmode #siteTable a.title[href*="/prematch_thread"],.res-nightmode #siteTable a.title[href*="/post_match_thread"],.res-nightmode #siteTable a.title[href*="/postmatch_thread"],.res-nightmode #siteTable a.title[href*="/match_report"],.res-nightmode #siteTable a.title[href*="/league_roundup"],.res-nightmode #siteTable a.title[href*="/league_round_up"]{color:#6c0!important}
+.res-nightmode .titlebox{background-color:#042008;border-color:#5fcf99}
+.res-nightmode .titlebox a{color:#5fcf99!important}
+.res-nightmode .titlebox h1:before{display:none}
+.res-nightmode .titlebox a:hover,.res-nightmode #siteTable a.title:hover{color:darkred!important;background-color:#ffc!important}
+.res-nightmode .fancy-toggle-button a{color:white!important}
+.res-nightmode .comment .flair,.res-nightmode .linkflairlabel{border:2px solid white!important;background-color:white!important;outline:1px solid black;margin-top:2px}
+.res-nightmode .sidecontentbox,.footer{background-color:transparent}
+.res-nightmode .footer-parent{padding-bottom:0;background-image:none}
+.res-nightmode .titlebox a[href="http://twitter.com/redditsoccer"]{background-image:none;width:auto;text-indent:0}
+.res-nightmode .usertext.grayed .usertext-body{color:gray;background-color:#111!important}
+.res-nightmode .thing.spam{background-color:#854e51!important}
+.res-nightmode .md #livescores table td{color:#ddd}
+.res-nightmode .md #livescores table td.live{color:#6c0}
+.res-nightmode .md #livescores tr:hover td{color:#222!important}
+.flair,.linkflairlabel{display:none;width:20px;height:20px;line-height:20px;text-indent:40px;overflow:hidden;background-image:url(http://d.thumbs.redditmedia.com/fJxU4QbK7hxZJdMQ.png);background-color:transparent;background-repeat:no-repeat;vertical-align:middle;padding:0;margin-right:4px;border-width:0;border-radius:0}
+.flairtoggle,.flairtoggle+.tagline,.flairselector .customizer{display:none}
+.comment .flair,.linkflairlabel{display:inline-block}
+.parent .flair{display:none}
+.flair{cursor:help}
+.collapsed .flair{opacity:0.4}
+.comment .flair-unknown{display:none;background-position:0 0}
+#siteTable_t3_16fue1 .flair-unknown{display:inline-block}
+.flair-s2,.linkflair-s2 .linkflairlabel{background-image:url(http://d.thumbs.redditmedia.com/gL660WxLk0JjbWDW.png)}
+.flair-s3,.linkflair-s3 .linkflairlabel{background-image:url(http://c.thumbs.redditmedia.com/8KWNqNceWkkmCrY8.png);width:40px}
+.flair-s4,.linkflair-s4 .linkflairlabel{background-image:url(http://d.thumbs.redditmedia.com/k4kUQiGcmoU5cEw-.png)}
+.flair-js-kabylie{background-position:0 -21px}
+.flair-argentina{background-position:0 -42px}
+.flair-boca-juniors,.linkflair-boca-juniors .linkflairlabel{background-position:0 -63px}
+.flair-ca-colon,.linkflair-ca-colon .linkflairlabel{background-position:0 -84px}
+.flair-huracan,.linkflair-huracan .linkflairlabel{background-position:0 -105px}
+.flair-independiente,.linkflair-independiente .linkflairlabel{background-position:0 -126px}
+.flair-racing-club,.linkflair-racing-club .linkflairlabel{background-position:0 -147px}
+.flair-river-plate,.linkflair-river-plate .linkflairlabel{background-position:0 -168px}
+.flair-san-lorenzo,.linkflair-san-lorenzo .linkflairlabel{background-position:0 -189px}
+.flair-velez,.linkflair-velez .linkflairlabel{background-position:0 -210px}
+.flair-adelaide-utd,.linkflair-adelaide-utd .linkflairlabel{background-position:0 -231px}
+.flair-australia{background-position:0 -252px}
+.flair-brisbane-roar,.linkflair-brisbane-roar .linkflairlabel{background-position:0 -273px}
+.flair-central-coast-mariners,.linkflair-central-coast-mariners .linkflairlabel{background-position:0 -294px}
+.flair-melbourne-heart,.linkflair-melbourne-heart .linkflairlabel{background-position:0 -315px}
+.flair-newcastle-jets,.linkflair-newcastle-jets .linkflairlabel{background-position:0 -336px}
+.flair-north-queensland-fury{background-position:0 -357px}
+.flair-perth-glory,.linkflair-perth-glory .linkflairlabel{background-position:0 -378px}
+.flair-sydney-fc,.linkflair-sydney-fc .linkflairlabel{background-position:0 -399px}
+.flair-anderlecht,.linkflair-anderlecht .linkflairlabel{background-position:0 -420px}
+.flair-club-brugge,.linkflair-club-brugge .linkflairlabel{background-position:0 -441px}
+.flair-genk,.linkflair-genk .linkflairlabel{background-position:0 -462px}
+.flair-standard-liege,.linkflair-standard-liege .linkflairlabel{background-position:0 -483px}
+.flair-bosnia-herzegovina,.linkflair-bosnia-herzegovina .linkflairlabel{background-position:0 -504px}
+.flair-zeljeznicar-sarajevo{background-position:0 -525px}
+.flair-velez-mostar{background-position:0 -546px}
+.flair-brazil,.linkflair-brazil .linkflairlabel{background-position:0 -567px}
+.flair-corinthians,.linkflair-corinthians .linkflairlabel{background-position:0 -588px}
+.flair-cruzeiro,.linkflair-cruzeiro .linkflairlabel{background-position:0 -609px}
+.flair-flamengo,.linkflair-flamengo .linkflairlabel{background-position:0 -630px}
+.flair-fluminense,.linkflair-fluminense .linkflairlabel{background-position:0 -651px}
+.flair-gremio,.linkflair-gremio .linkflairlabel{background-position:0 -672px}
+.flair-internacional,.linkflair-internacional .linkflairlabel{background-position:0 -693px}
+.flair-palmeiras,.linkflair-palmeiras .linkflairlabel{background-position:0 -714px}
+.flair-santos,.linkflair-santos .linkflairlabel{background-position:0 -735px}
+.flair-sao-paulo,.linkflair-sao-paulo .linkflairlabel{background-position:0 -756px}
+.flair-vasco-da-gama,.linkflair-vasco-da-gama .linkflairlabel{background-position:0 -777px}
+.flair-cska-sofia{background-position:0 -798px}
+.flair-levski-sofia{background-position:0 -819px}
+.flair-montreal-impact,.linkflair-montreal-impact .linkflairlabel{background-position:0 -840px}
+.flair-toronto-fc,.linkflair-toronto-fc .linkflairlabel{background-position:0 -861px}
+.flair-vancouver-whitecaps,.linkflair-vancouver-whitecaps .linkflairlabel{background-position:0 -882px}
+.flair-chile,.linkflair-chile .linkflairlabel{background-position:0 -903px}
+.flair-colo-colo,.linkflair-colo-colo .linkflairlabel{background-position:0 -924px}
+.flair-universidad-de-chile,.linkflair-universidad-de-chile .linkflairlabel{background-position:0 -945px}
+.flair-deportivo-cali{background-position:0 -966px}
+.flair-millonarios{background-position:0 -987px}
+.flair-dinamo-zagreb,.linkflair-dinamo-zagreb .linkflairlabel{background-position:0 -1008px}
+.flair-hajduk-split,.linkflair-hajduk-split .linkflairlabel{background-position:0 -1029px}
+.flair-nk-osijek,.linkflair-nk-osijek .linkflairlabel{background-position:0 -1050px}
+.flair-apoel-nikosia,.linkflair-apoel-nikosia .linkflairlabel{background-position:0 -1071px}
+.flair-slavia-praha,.linkflair-slavia-praha .linkflairlabel{background-position:0 -1092px}
+.flair-sparta-prague,.linkflair-sparta-prague .linkflairlabel{background-position:0 -1113px}
+.flair-aalborg,.linkflair-aalborg .linkflairlabel{background-position:0 -1134px}
+.flair-aarhus-gf,.linkflair-aarhus-gf .linkflairlabel{background-position:0 -1155px}
+.flair-brondby,.linkflair-brondby .linkflairlabel{background-position:0 -1176px}
+.flair-denmark,.linkflair-denmark .linkflairlabel{background-position:0 -1197px}
+.flair-fc-copenhagen,.linkflair-fc-copenhagen .linkflairlabel{background-position:0 -1218px}
+.flair-odense-bk,.linkflair-odense-bk .linkflairlabel{background-position:0 -1239px}
+.flair-arminia-bielefeld{background-position:0 -1260px}
+.flair-bayer-leverkusen,.linkflair-bayer-leverkusen .linkflairlabel{background-position:0 -1281px}
+.flair-bayern-munich,.linkflair-bayern-munich .linkflairlabel{background-position:0 -1302px}
+.flair-bochum,.linkflair-bochum .linkflairlabel{background-position:0 -1323px}
+.flair-borussia-dortmund,.linkflair-borussia-dortmund .linkflairlabel{background-position:0 -1344px}
+.flair-borussia-monchengladbach,.linkflair-borussia-monchengladbach .linkflairlabel{background-position:0 -1365px}
+.flair-eintracht-frankfurt,.linkflair-eintracht-frankfurt .linkflairlabel{background-position:0 -1386px}
+.flair-augsburg,.linkflair-augsburg .linkflairlabel{background-position:0 -1407px}
+.flair-koln{background-position:0 -1428px}
+.flair-nurnberg,.linkflair-nurnberg .linkflairlabel{background-position:0 -1449px}
+.flair-st-pauli,.linkflair-st-pauli .linkflairlabel{background-position:0 -1470px}
+.flair-freiburg,.linkflair-freiburg .linkflairlabel{background-position:0 -1491px}
+.flair-hannover96,.linkflair-hannover96 .linkflairlabel{background-position:0 -1512px}
+.flair-hansa-rostock,.linkflair-hansa-rostock .linkflairlabel{background-position:0 -1533px}
+.flair-hertha-berlin{background-position:0 -1554px}
+.flair-hoffenheim,.linkflair-hoffenheim .linkflairlabel{background-position:0 -1575px}
+.flair-kaiserslautern,.linkflair-kaiserslautern .linkflairlabel{background-position:0 -1596px}
+.flair-mainz,.linkflair-mainz .linkflairlabel{background-position:0 -1617px}
+.flair-hamburg,.linkflair-hamburg .linkflairlabel{background-position:0 -1638px}
+.flair-wehen-wiesbaden{background-position:0 -1659px}
+.flair-schalke04,.linkflair-schalke04 .linkflairlabel{background-position:0 -1680px}
+.flair-stuttgart,.linkflair-stuttgart .linkflairlabel{background-position:0 -1701px}
+.flair-werder-bremen,.linkflair-werder-bremen .linkflairlabel{background-position:0 -1722px}
+.flair-wolfsburg,.linkflair-wolfsburg .linkflairlabel{background-position:0 -1743px}
+.flair-al-ahly{background-position:0 -1764px}
+.flair-wimbledon,.linkflair-wimbledon .linkflairlabel{background-position:0 -1785px}
+.flair-arsenal,.linkflair-arsenal .linkflairlabel{background-position:0 -1806px}
+.flair-aston-villa,.linkflair-aston-villa .linkflairlabel{background-position:0 -1827px}
+.flair-barnet,.linkflair-barnet .linkflairlabel{background-position:0 -1848px}
+.flair-barnsley,.linkflair-barnsley .linkflairlabel{background-position:0 -1869px}
+.flair-birmingham,.linkflair-birmingham .linkflairlabel{background-position:0 -1890px}
+.flair-blackburn,.linkflair-blackburn .linkflairlabel{background-position:0 -1911px}
+.flair-blackpool,.linkflair-blackpool .linkflairlabel{background-position:0 -1932px}
+.flair-bolton,.linkflair-bolton .linkflairlabel{background-position:0 -1953px}
+.flair-bournemouth,.linkflair-bournemouth .linkflairlabel{background-position:0 -1974px}
+.flair-bradford,.linkflair-bradford .linkflairlabel{background-position:0 -1995px}
+.flair-brentford,.linkflair-brentford .linkflairlabel{background-position:0 -2016px}
+.flair-brighton,.linkflair-brighton .linkflairlabel{background-position:0 -2037px}
+.flair-bristol-city,.linkflair-bristol-city .linkflairlabel{background-position:0 -2058px}
+.flair-bristol-rovers,.linkflair-bristol-rovers .linkflairlabel{background-position:0 -2079px}
+.flair-burnley,.linkflair-burnley .linkflairlabel{background-position:0 -2100px}
+.flair-cardiff,.linkflair-cardiff .linkflairlabel{background-position:0 -2121px}
+.flair-carlisle,.linkflair-carlisle .linkflairlabel{background-position:0 -2142px}
+.flair-charlton,.linkflair-charlton .linkflairlabel{background-position:0 -2163px}
+.flair-chelsea,.linkflair-chelsea .linkflairlabel{background-position:0 -2184px}
+.flair-cheltenham-town,.linkflair-cheltenham-town .linkflairlabel{background-position:0 -2205px}
+.flair-colchester,.linkflair-colchester .linkflairlabel{background-position:0 -2226px}
+.flair-coventry,.linkflair-coventry .linkflairlabel{background-position:0 -2247px}
+.flair-crystal-palace,.linkflair-crystal-palace .linkflairlabel{background-position:0 -2268px}
+.flair-derby,.linkflair-derby .linkflairlabel{background-position:0 -2289px}
+.flair-doncaster,.linkflair-doncaster .linkflairlabel{background-position:0 -2310px}
+.flair-england,.linkflair-england .linkflairlabel{background-position:0 -2331px}
+.flair-everton,.linkflair-everton .linkflairlabel{background-position:0 -2352px}
+.flair-exeter,.linkflair-exeter .linkflairlabel{background-position:0 -2373px}
+.flair-fc-united,.linkflair-fc-united .linkflairlabel{background-position:0 -2394px}
+.flair-forest-green-rovers,.linkflair-forest-green-rovers .linkflairlabel{background-position:0 -2415px}
+.flair-fulham,.linkflair-fulham .linkflairlabel{background-position:0 -2436px}
+.flair-gillingham,.linkflair-gillingham .linkflairlabel{background-position:0 -2457px}
+.flair-grimsby,.linkflair-grimsby .linkflairlabel{background-position:0 -2478px}
+.flair-hartlepool,.linkflair-hartlepool .linkflairlabel{background-position:0 -2499px}
+.flair-huddersfield,.linkflair-huddersfield .linkflairlabel{background-position:0 -2520px}
+.flair-hull,.linkflair-hull .linkflairlabel{background-position:0 -2541px}
+.flair-ipswich,.linkflair-ipswich .linkflairlabel{background-position:0 -2562px}
+.flair-leeds,.linkflair-leeds .linkflairlabel{background-position:0 -2583px}
+.flair-leicester,.linkflair-leicester .linkflairlabel{background-position:0 -2604px}
+.flair-lincoln-city,.linkflair-lincoln-city .linkflairlabel{background-position:0 -2625px}
+.flair-liverpool,.linkflair-liverpool .linkflairlabel{background-position:0 -2646px}
+.flair-luton,.linkflair-luton .linkflairlabel{background-position:0 -2667px}
+.flair-mk-dons,.linkflair-mk-dons .linkflairlabel{background-position:0 -2688px}
+.flair-man-city,.linkflair-man-city .linkflairlabel{background-position:0 -2709px}
+.flair-man-utd,.linkflair-man-utd .linkflairlabel{background-position:0 -2730px}
+.flair-middlesboro,.linkflair-middlesboro .linkflairlabel{background-position:0 -2751px}
+.flair-millwall,.linkflair-millwall .linkflairlabel{background-position:0 -2772px}
+.flair-morecambe,.linkflair-morecambe .linkflairlabel{background-position:0 -2793px}
+.flair-newcastle,.linkflair-newcastle .linkflairlabel{background-position:0 -2814px}
+.flair-norwich,.linkflair-norwich .linkflairlabel{background-position:0 -2835px}
+.flair-nottm-forest,.linkflair-nottm-forest .linkflairlabel{background-position:0 -2856px}
+.flair-notts-co,.linkflair-notts-co .linkflairlabel{background-position:0 -2877px}
+.flair-oldham,.linkflair-oldham .linkflairlabel{background-position:0 -2898px}
+.flair-orient,.linkflair-orient .linkflairlabel{background-position:0 -2919px}
+.flair-oxford,.linkflair-oxford .linkflairlabel{background-position:0 -2940px}
+.flair-peterboro,.linkflair-peterboro .linkflairlabel{background-position:0 -2961px}
+.flair-plymouth,.linkflair-plymouth .linkflairlabel{background-position:0 -2982px}
+.flair-port-vale,.linkflair-port-vale .linkflairlabel{background-position:0 -3003px}
+.flair-portsmouth,.linkflair-portsmouth .linkflairlabel{background-position:0 -3024px}
+.flair-preston,.linkflair-preston .linkflairlabel{background-position:0 -3045px}
+.flair-qpr,.linkflair-qpr .linkflairlabel{background-position:0 -3066px}
+.flair-reading,.linkflair-reading .linkflairlabel{background-position:0 -3087px}
+.flair-redditch,.linkflair-redditch .linkflairlabel{background-position:0 -3108px}
+.flair-scunthorpe,.linkflair-scunthorpe .linkflairlabel{background-position:0 -3129px}
+.flair-sheff-utd,.linkflair-sheff-utd .linkflairlabel{background-position:0 -3150px}
+.flair-sheff-wed,.linkflair-sheff-wed .linkflairlabel{background-position:0 -3171px}
+.flair-southampton,.linkflair-southampton .linkflairlabel{background-position:0 -3192px}
+.flair-southend,.linkflair-southend .linkflairlabel{background-position:0 -3213px}
+.flair-stevenage,.linkflair-stevenage .linkflairlabel{background-position:0 -3234px}
+.flair-stockport,.linkflair-stockport .linkflairlabel{background-position:0 -3255px}
+.flair-stoke,.linkflair-stoke .linkflairlabel{background-position:0 -3276px}
+.flair-sunderland,.linkflair-sunderland .linkflairlabel{background-position:0 -3297px}
+.flair-swansea,.linkflair-swansea .linkflairlabel{background-position:0 -3318px}
+.flair-swindon,.linkflair-swindon .linkflairlabel{background-position:0 -3339px}
+.flair-tottenham,.linkflair-tottenham .linkflairlabel{background-position:0 -3360px}
+.flair-tranmere,.linkflair-tranmere .linkflairlabel{background-position:0 -3381px}
+.flair-walsall,.linkflair-walsall .linkflairlabel{background-position:0 -3402px}
+.flair-watford,.linkflair-watford .linkflairlabel{background-position:0 -3423px}
+.flair-west-brom,.linkflair-west-brom .linkflairlabel{background-position:0 -3444px}
+.flair-west-ham,.linkflair-west-ham .linkflairlabel{background-position:0 -3465px}
+.flair-wigan,.linkflair-wigan .linkflairlabel{background-position:0 -3486px}
+.flair-wolves,.linkflair-wolves .linkflairlabel{background-position:0 -3507px}
+.flair-wycombe,.linkflair-wycombe .linkflairlabel{background-position:0 -3528px}
+.flair-yeovil,.linkflair-yeovil .linkflairlabel{background-position:0 -3549px}
+.flair-york,.linkflair-york .linkflairlabel{background-position:0 -3570px}
+.flair-almeria{background-position:0 -3591px}
+.flair-athletic-bilbao,.linkflair-athletic-bilbao .linkflairlabel{background-position:0 -3612px}
+.flair-atletico-madrid,.linkflair-atletico-madrid .linkflairlabel{background-position:0 -3633px}
+.flair-barcelona,.linkflair-barcelona .linkflairlabel{background-position:0 -3654px}
+.flair-betis,.linkflair-betis .linkflairlabel{background-position:0 -3675px}
+.flair-celta-vigo,.linkflair-celta-vigo .linkflairlabel{background-position:0 -3696px}
+.flair-deportivo-la-coruna,.linkflair-deportivo-la-coruna .linkflairlabel{background-position:0 -3717px}
+.flair-espanyol,.linkflair-espanyol .linkflairlabel{background-position:0 -3738px}
+.flair-getafe,.linkflair-getafe .linkflairlabel{background-position:0 -3759px}
+.flair-gijon{background-position:0 -3780px}
+.flair-malaga,.linkflair-malaga .linkflairlabel{background-position:0 -3801px}
+.flair-mallorca,.linkflair-mallorca .linkflairlabel{background-position:0 -3822px}
+.flair-osasuna,.linkflair-osasuna .linkflairlabel{background-position:0 -3843px}
+.flair-real-madrid,.linkflair-real-madrid .linkflairlabel{background-position:0 -3864px}
+.flair-santander,.linkflair-santander .linkflairlabel{background-position:0 -3885px}
+.flair-sevilla,.linkflair-sevilla .linkflairlabel{background-position:0 -3906px}
+.flair-spain,.linkflair-spain .linkflairlabel{background-position:0 -3927px}
+.flair-tenerife{background-position:0 -3948px}
+.flair-valencia,.linkflair-valencia .linkflairlabel{background-position:0 -3969px}
+.flair-valladolid,.linkflair-valladolid .linkflairlabel{background-position:0 -3990px}
+.flair-villarreal,.linkflair-villarreal .linkflairlabel{background-position:0 -4011px}
+.flair-xerez{background-position:0 -4032px}
+.flair-zaragoza,.linkflair-zaragoza .linkflairlabel{background-position:0 -4053px}
+.flair-estonia,.linkflair-estonia .linkflairlabel{background-position:0 -4074px}
+.flair-hjk-helsinki,.linkflair-hjk-helsinki .linkflairlabel{background-position:0 -4095px}
+.flair-auxerre{background-position:0 -4116px}
+.flair-bordeaux,.linkflair-bordeaux .linkflairlabel{background-position:0 -4137px}
+.flair-lens,.linkflair-lens .linkflairlabel{background-position:0 -4158px}
+.flair-lille,.linkflair-lille .linkflairlabel{background-position:0 -4179px}
+.flair-lyon,.linkflair-lyon .linkflairlabel{background-position:0 -4200px}
+.flair-marseille,.linkflair-marseille .linkflairlabel{background-position:0 -4221px}
+.flair-metz,.linkflair-metz .linkflairlabel{background-position:0 -4242px}
+.flair-monaco,.linkflair-monaco .linkflairlabel{background-position:0 -4263px}
+.flair-montpellier,.linkflair-montpellier .linkflairlabel{background-position:0 -4284px}
+.flair-paris-sg,.linkflair-paris-sg .linkflairlabel{background-position:0 -4305px}
+.flair-sm-caen{background-position:0 -4326px}
+.flair-st-etienne,.linkflair-st-etienne .linkflairlabel{background-position:0 -4347px}
+.flair-aek-athens,.linkflair-aek-athens .linkflairlabel{background-position:0 -4368px}
+.flair-olympiacos,.linkflair-olympiacos .linkflairlabel{background-position:0 -4389px}
+.flair-panathinaikos,.linkflair-panathinaikos .linkflairlabel{background-position:0 -4410px}
+.flair-honduras{background-position:0 -4431px}
+.flair-videoton{background-position:0 -4452px}
+.flair-leiknir-reykjavik,.linkflair-leiknir-reykjavik .linkflairlabel{background-position:0 -4473px}
+.flair-thor-akureyri,.linkflair-thor-akureyri .linkflairlabel{background-position:0 -4494px}
+.flair-sc-goa{background-position:0 -4515px}
+.flair-cork-city,.linkflair-cork-city .linkflairlabel{background-position:0 -4536px}
+.flair-galway-united,.linkflair-galway-united .linkflairlabel{background-position:0 -4557px}
+.flair-ireland,.linkflair-ireland .linkflairlabel{background-position:0 -4578px}
+.flair-shelbourne,.linkflair-shelbourne .linkflairlabel{background-position:0 -4599px}
+.flair-beitar-jerusalem,.linkflair-beitar-jerusalem .linkflairlabel{background-position:0 -4620px}
+.flair-hapoel-tel-aviv,.linkflair-hapoel-tel-aviv .linkflairlabel{background-position:0 -4641px}
+.flair-ac-milan,.linkflair-ac-milan .linkflairlabel{background-position:0 -4662px}
+.flair-ac-pistoiese,.linkflair-ac-pistoiese .linkflairlabel{background-position:0 -4683px}
+.flair-atalanta,.linkflair-atalanta .linkflairlabel{background-position:0 -4704px}
+.flair-bari,.linkflair-bari .linkflairlabel{background-position:0 -4725px}
+.flair-bologna,.linkflair-bologna .linkflairlabel{background-position:0 -4746px}
+.flair-cagliari,.linkflair-cagliari .linkflairlabel{background-position:0 -4767px}
+.flair-catania,.linkflair-catania .linkflairlabel{background-position:0 -4788px}
+.flair-chievo{background-position:0 -4809px}
+.flair-fiorentina,.linkflair-fiorentina .linkflairlabel{background-position:0 -4830px}
+.flair-genoa,.linkflair-genoa .linkflairlabel{background-position:0 -4851px}
+.flair-inter,.linkflair-inter .linkflairlabel{background-position:0 -4872px}
+.flair-juventus,.linkflair-juventus .linkflairlabel{background-position:0 -4893px}
+.flair-lazio,.linkflair-lazio .linkflairlabel{background-position:0 -4914px}
+.flair-lecce,.linkflair-lecce .linkflairlabel{background-position:0 -4935px}
+.flair-livorno,.linkflair-livorno .linkflairlabel{background-position:0 -4956px}
+.flair-napoli,.linkflair-napoli .linkflairlabel{background-position:0 -4977px}
+.flair-palermo,.linkflair-palermo .linkflairlabel{background-position:0 -4998px}
+.flair-parma,.linkflair-parma .linkflairlabel{background-position:0 -5019px}
+.flair-roma,.linkflair-roma .linkflairlabel{background-position:0 -5040px}
+.flair-sampdoria,.linkflair-sampdoria .linkflairlabel{background-position:0 -5061px}
+.flair-siena,.linkflair-siena .linkflairlabel{background-position:0 -5082px}
+.flair-udinese,.linkflair-udinese .linkflairlabel{background-position:0 -5103px}
+.flair-verona,.linkflair-verona .linkflairlabel{background-position:0 -5124px}
+.flair-cerezo-osaka,.linkflair-cerezo-osaka .linkflairlabel{background-position:0 -5145px}
+.flair-fc-tokyo,.linkflair-fc-tokyo .linkflairlabel{background-position:0 -5166px}
+.flair-kashima-antlers{background-position:0 -5187px}
+.flair-nagoya-grampus,.linkflair-nagoya-grampus .linkflairlabel{background-position:0 -5208px}
+.flair-pohang-steelers,.linkflair-pohang-steelers .linkflairlabel{background-position:0 -5229px}
+.flair-south-korea,.linkflair-south-korea .linkflairlabel{background-position:0 -5250px}
+.flair-fbk-kaunas{background-position:0 -5271px}
+.flair-vb-sports-club{background-position:0 -5292px}
+.flair-atlante{background-position:0 -5313px}
+.flair-chivas,.linkflair-chivas .linkflairlabel{background-position:0 -5334px}
+.flair-club-america,.linkflair-club-america .linkflairlabel{background-position:0 -5355px}
+.flair-club-atlas{background-position:0 -5376px}
+.flair-club-leon{background-position:0 -5397px}
+.flair-cruz-azul,.linkflair-cruz-azul .linkflairlabel{background-position:0 -5418px}
+.flair-mexico,.linkflair-mexico .linkflairlabel{background-position:0 -5439px}
+.flair-monarcas-morelia{background-position:0 -5460px}
+.flair-monterrey{background-position:0 -5481px}
+.flair-pachuca{background-position:0 -5502px}
+.flair-puebla-fc{background-position:0 -5523px}
+.flair-pumas{background-position:0 -5544px}
+.flair-reboceros-de-la-piedad{background-position:0 -5565px}
+.flair-santos-laguna{background-position:0 -5586px}
+.flair-tigres{background-position:0 -5607px}
+.flair-toluca{background-position:0 -5628px}
+.flair-universidad-de-guadalajara{background-position:0 -5649px}
+.flair-wydad-ac{background-position:0 -5670px}
+.flair-az-alkmaar,.linkflair-az-alkmaar .linkflairlabel{background-position:0 -5691px}
+.flair-ajax,.linkflair-ajax .linkflairlabel{background-position:0 -5712px}
+.flair-vitesse,.linkflair-vitesse .linkflairlabel{background-position:0 -5733px}
+.flair-dos-kampen,.linkflair-dos-kampen .linkflairlabel{background-position:0 -5754px}
+.flair-den-haag,.linkflair-den-haag .linkflairlabel{background-position:0 -5775px}
+.flair-feyenoord,.linkflair-feyenoord .linkflairlabel{background-position:0 -5796px}
+.flair-groningen,.linkflair-groningen .linkflairlabel{background-position:0 -5817px}
+.flair-heerenveen,.linkflair-heerenveen .linkflairlabel{background-position:0 -5838px}
+.flair-heracles,.linkflair-heracles .linkflairlabel{background-position:0 -5859px}
+.flair-holland,.linkflair-holland .linkflairlabel{background-position:0 -5880px}
+.flair-psv,.linkflair-psv .linkflairlabel{background-position:0 -5901px}
+.flair-roda,.linkflair-roda .linkflairlabel{background-position:0 -5922px}
+.flair-sparta,.linkflair-sparta .linkflairlabel{background-position:0 -5943px}
+.flair-twente,.linkflair-twente .linkflairlabel{background-position:0 -5964px}
+.flair-utrecht,.linkflair-utrecht .linkflairlabel{background-position:0 -5985px}
+.flair-bangor-fc,.linkflair-bangor-fc .linkflairlabel{background-position:0 -6006px}
+.flair-linfield,.linkflair-linfield .linkflairlabel{background-position:0 -6027px}
+.flair-lisburn-distillery,.linkflair-lisburn-distillery .linkflairlabel{background-position:0 -6048px}
+.flair-aalesunds-fk,.linkflair-aalesunds-fk .linkflairlabel{background-position:0 -6069px}
+.flair-molde-fk,.linkflair-molde-fk .linkflairlabel{background-position:0 -6090px}
+.flair-rosenborg,.linkflair-rosenborg .linkflairlabel{background-position:0 -6111px}
+.flair-stabak,.linkflair-stabak .linkflairlabel{background-position:0 -6132px}
+.flair-tromso,.linkflair-tromso .linkflairlabel{background-position:0 -6153px}
+.flair-viking-fk,.linkflair-viking-fk .linkflairlabel{background-position:0 -6174px}
+.flair-wellington-phoenix,.linkflair-wellington-phoenix .linkflairlabel{background-position:0 -6195px}
+.flair-pakistan,.linkflair-pakistan .linkflairlabel{background-position:0 -6216px}
+.flair-alianza-lima{background-position:0 -6237px}
+.flair-cienciano{background-position:0 -6258px}
+.flair-deportivo-wanka{background-position:0 -6279px}
+.flair-universitario-de-deportes{background-position:0 -6300px}
+.flair-lech-poznan{background-position:0 -6321px}
+.flair-legia-warsaw,.linkflair-legia-warsaw .linkflairlabel{background-position:0 -6342px}
+.flair-polonia-warszawa{background-position:0 -6363px}
+.flair-widzew-lodz{background-position:0 -6384px}
+.flair-wisla-krakow{background-position:0 -6405px}
+.flair-benfica,.linkflair-benfica .linkflairlabel{background-position:0 -6426px}
+.flair-braga,.linkflair-braga .linkflairlabel{background-position:0 -6447px}
+.flair-fc-porto,.linkflair-fc-porto .linkflairlabel{background-position:0 -6468px}
+.flair-sporting-club,.linkflair-sporting-club .linkflairlabel{background-position:0 -6489px}
+.flair-cfr-cluj{background-position:0 -6510px}
+.flair-dinamo-bucuresti{background-position:0 -6531px}
+.flair-steaua-bucharest,.linkflair-steaua-bucharest .linkflairlabel{background-position:0 -6552px}
+.flair-cska-moscow,.linkflair-cska-moscow .linkflairlabel{background-position:0 -6573px}
+.flair-dinamo-moscow,.linkflair-dinamo-moscow .linkflairlabel{background-position:0 -6594px}
+.flair-rostov,.linkflair-rostov .linkflairlabel{background-position:0 -6615px}
+.flair-rubin-kazan,.linkflair-rubin-kazan .linkflairlabel{background-position:0 -6636px}
+.flair-spartak-moscow,.linkflair-spartak-moscow .linkflairlabel{background-position:0 -6657px}
+.flair-zenit,.linkflair-zenit .linkflairlabel{background-position:0 -6678px}
+.flair-al-hilal{background-position:0 -6699px}
+.flair-aberdeen,.linkflair-aberdeen .linkflairlabel{background-position:0 -6720px}
+.flair-celtic,.linkflair-celtic .linkflairlabel{background-position:0 -6741px}
+.flair-dundee-utd,.linkflair-dundee-utd .linkflairlabel{background-position:0 -6762px}
+.flair-east-fife{background-position:0 -6783px}
+.flair-falkirk{background-position:0 -6804px}
+.flair-greenock-morton{background-position:0 -6825px}
+.flair-hearts,.linkflair-hearts .linkflairlabel{background-position:0 -6846px}
+.flair-hibernian,.linkflair-hibernian .linkflairlabel{background-position:0 -6867px}
+.flair-inverness,.linkflair-inverness .linkflairlabel{background-position:0 -6888px}
+.flair-kilmarnock,.linkflair-kilmarnock .linkflairlabel{background-position:0 -6909px}
+.flair-motherwell,.linkflair-motherwell .linkflairlabel{background-position:0 -6930px}
+.flair-rangers,.linkflair-rangers .linkflairlabel{background-position:0 -6951px}
+.flair-st-johnstone,.linkflair-st-johnstone .linkflairlabel{background-position:0 -6972px}
+.flair-st-mirren,.linkflair-st-mirren .linkflairlabel{background-position:0 -6993px}
+.flair-partizan{background-position:0 -7014px}
+.flair-red-star-belgrade{background-position:0 -7035px}
+.flair-vojvodina{background-position:0 -7056px}
+.flair-nk-maribor{background-position:0 -7077px}
+.flair-fc-basel,.linkflair-fc-basel .linkflairlabel{background-position:0 -7098px}
+.flair-fc-zurich,.linkflair-fc-zurich .linkflairlabel{background-position:0 -7119px}
+.flair-grasshopper,.linkflair-grasshopper .linkflairlabel{background-position:0 -7140px}
+.flair-young-boys,.linkflair-young-boys .linkflairlabel{background-position:0 -7161px}
+.flair-aik,.linkflair-aik .linkflairlabel{background-position:0 -7182px}
+.flair-djurgardens,.linkflair-djurgardens .linkflairlabel{background-position:0 -7203px}
+.flair-halmstads,.linkflair-halmstads .linkflairlabel{background-position:0 -7224px}
+.flair-hammarby-if,.linkflair-hammarby-if .linkflairlabel{background-position:0 -7245px}
+.flair-helsingborgs,.linkflair-helsingborgs .linkflairlabel{background-position:0 -7266px}
+.flair-if-brommapojkarna,.linkflair-if-brommapojkarna .linkflairlabel{background-position:0 -7287px}
+.flair-ifk-gothenberg,.linkflair-ifk-gothenberg .linkflairlabel{background-position:0 -7308px}
+.flair-malmo,.linkflair-malmo .linkflairlabel{background-position:0 -7329px}
+.flair-orebro-sk,.linkflair-orebro-sk .linkflairlabel{background-position:0 -7350px}
+.flair-bestikas,.linkflair-bestikas .linkflairlabel{background-position:0 -7371px}
+.flair-fenerbahce,.linkflair-fenerbahce .linkflairlabel{background-position:0 -7392px}
+.flair-galatasaray,.linkflair-galatasaray .linkflairlabel{background-position:0 -7413px}
+.flair-goztepe,.linkflair-goztepe .linkflairlabel{background-position:0 -7434px}
+.flair-trabzonspor,.linkflair-trabzonspor .linkflairlabel{background-position:0 -7455px}
+.flair-dinamo-kiev,.linkflair-dinamo-kiev .linkflairlabel{background-position:0 -7476px}
+.flair-metalist-kharkov,.linkflair-metalist-kharkov .linkflairlabel{background-position:0 -7497px}
+.flair-shakhtar-donetsk,.linkflair-shakhtar-donetsk .linkflairlabel{background-position:0 -7518px}
+.flair-penarol,.linkflair-penarol .linkflairlabel{background-position:0 -7539px}
+.flair-austin-aztex,.linkflair-austin-aztex .linkflairlabel{background-position:0 -7560px}
+.flair-chicago-fire,.linkflair-chicago-fire .linkflairlabel{background-position:0 -7581px}
+.flair-chivas-usa,.linkflair-chivas-usa .linkflairlabel{background-position:0 -7602px}
+.flair-colorado-rapids,.linkflair-colorado-rapids .linkflairlabel{background-position:0 -7623px}
+.flair-columbus-crew,.linkflair-columbus-crew .linkflairlabel{background-position:0 -7644px}
+.flair-dc-united,.linkflair-dc-united .linkflairlabel{background-position:0 -7665px}
+.flair-fc-dallas,.linkflair-fc-dallas .linkflairlabel{background-position:0 -7686px}
+.flair-houston-dynamo,.linkflair-houston-dynamo .linkflairlabel{background-position:0 -7707px}
+.flair-la-galaxy,.linkflair-la-galaxy .linkflairlabel{background-position:0 -7728px}
+.flair-miami-fc{background-position:0 -7749px}
+.flair-miami-fusion{background-position:0 -7770px}
+.flair-minnesota-united{background-position:0 -7791px}
+.flair-new-england-revolution,.linkflair-new-england-revolution .linkflairlabel{background-position:0 -7812px}
+.flair-new-york-red-bulls,.linkflair-new-york-red-bulls .linkflairlabel{background-position:0 -7833px}
+.flair-philadelphia-union,.linkflair-philadelphia-union .linkflairlabel{background-position:0 -7854px}
+.flair-portland-timbers,.linkflair-portland-timbers .linkflairlabel{background-position:0 -7875px}
+.flair-real-salt-lake,.linkflair-real-salt-lake .linkflairlabel{background-position:0 -7896px}
+.flair-san-jose-earthquakes,.linkflair-san-jose-earthquakes .linkflairlabel{background-position:0 -7917px}
+.flair-seattle-sounders,.linkflair-seattle-sounders .linkflairlabel{background-position:0 -7938px}
+.flair-sporting-kc,.linkflair-sporting-kc .linkflairlabel{background-position:0 -7959px}
+.flair-usmnt,.linkflair-usmnt .linkflairlabel{background-position:0 -7980px}
+.flair-caracas-fc{background-position:0 -8001px}
+.flair-grenoble{background-position:0 -8022px}
+.flair-servette,.linkflair-servette .linkflairlabel{background-position:0 -8043px}
+.flair-crewe,.linkflair-crewe .linkflairlabel{background-position:0 -8064px}
+.flair-malaysia,.linkflair-malaysia .linkflairlabel{background-position:0 -8085px}
+.flair-real-sociedad,.linkflair-real-sociedad .linkflairlabel{background-position:0 -8106px}
+.flair-sigma-olomouc,.linkflair-sigma-olomouc .linkflairlabel{background-position:0 -8127px}
+.flair-montenegro{background-position:0 -8148px}
+.flair-sligo-rovers,.linkflair-sligo-rovers .linkflairlabel{background-position:0 -8169px}
+.flair-fc-volendam,.linkflair-fc-volendam .linkflairlabel{background-position:0 -8190px}
+.flair-shanghai-shenhua{background-position:0 -8211px}
+.flair-bsg-chemie-leipzig,.linkflair-bsg-chemie-leipzig .linkflairlabel{background-position:0 -8232px}
+.flair-olimpo{background-position:0 -8253px}
+.flair-jjk-jyvaskyla,.linkflair-jjk-jyvaskyla .linkflairlabel{background-position:0 -8274px}
+.flair-universidad-catolica,.linkflair-universidad-catolica .linkflairlabel{background-position:0 -8295px}
+.flair-panama{background-position:0 -8316px}
+.flair-prottur-reykjavik,.linkflair-prottur-reykjavik .linkflairlabel{background-position:0 -8337px}
+.flair-ldu-quito{background-position:0 -8358px}
+.flair-sturm-graz,.linkflair-sturm-graz .linkflairlabel{background-position:0 -8379px}
+.flair-club-tijuana{background-position:0 -8400px}
+.flair-peru{background-position:0 -8421px}
+.flair-le-havre,.linkflair-le-havre .linkflairlabel{background-position:0 -8442px}
+.flair-ofk-bar{background-position:0 -8463px}
+.flair-barrow,.linkflair-barrow .linkflairlabel{background-position:0 -8484px}
+.flair-france,.linkflair-france .linkflairlabel{background-position:0 -8505px}
+.flair-germany,.linkflair-germany .linkflairlabel{background-position:0 -8526px}
+.flair-cd-motagua{background-position:0 -8547px}
+.flair-east-bengal{background-position:0 -8568px}
+.flair-kaizer-chiefs{background-position:0 -8589px}
+.flair-ayr-united{background-position:0 -8610px}
+.flair-alianza-fc{background-position:0 -8631px}
+.flair-wrexham,.linkflair-wrexham .linkflairlabel{background-position:0 -8652px}
+.flair-indios-juarez{background-position:0 -8673px}
+.flair-bury,.linkflair-bury .linkflairlabel{background-position:0 -8694px}
+.flair-sochaux,.linkflair-sochaux .linkflairlabel{background-position:0 -8715px}
+.flair-philippines,.linkflair-philippines .linkflairlabel{background-position:0 -8736px}
+.flair-dunfermline{background-position:0 -8757px}
+.flair-ittihad{background-position:0 -8778px}
+.flair-paok,.linkflair-paok .linkflairlabel{background-position:0 -8799px}
+.flair-orlando-city,.linkflair-orlando-city .linkflairlabel{background-position:0 -8820px}
+.flair-vitoria,.linkflair-vitoria .linkflairlabel{background-position:0 -8841px}
+.flair-preussen{background-position:0 -8862px}
+.flair-cadiz{background-position:0 -8883px}
+.flair-japan,.linkflair-japan .linkflairlabel{background-position:0 -8904px}
+.flair-granada,.linkflair-granada .linkflairlabel{background-position:0 -8925px}
+.flair-atletico-bucaramanga{background-position:0 -8946px}
+.flair-new-zealand{background-position:0 -8967px}
+.flair-vasco-sc{background-position:0 -8988px}
+.flair-western-new-york-flash,.linkflair-western-new-york-flash .linkflairlabel{background-position:0 -9009px}
+.flair-israel,.linkflair-israel .linkflairlabel{background-position:0 -9030px}
+.flair-stromsgodset,.linkflair-stromsgodset .linkflairlabel{background-position:0 -9051px}
+.flair-bursaspor,.linkflair-bursaspor .linkflairlabel{background-position:0 -9072px}
+.flair-serbia{background-position:0 -9093px}
+.flair-honka,.linkflair-honka .linkflairlabel{background-position:0 -9114px}
+.flair-melbourne-victory,.linkflair-melbourne-victory .linkflairlabel{background-position:0 -9135px}
+.flair-argentinos-juniors,.linkflair-argentinos-juniors .linkflairlabel{background-position:0 -9156px}
+.flair-nacional{background-position:0 -9177px}
+.flair-nomme-kalju,.linkflair-nomme-kalju .linkflairlabel{background-position:0 -9198px}
+.flair-st-patricks,.linkflair-st-patricks .linkflairlabel{background-position:0 -9219px}
+.flair-faroe-islands{background-position:0 -9240px}
+.flair-south-africa{background-position:0 -9261px}
+.flair-borac{background-position:0 -9282px}
+.flair-horsens,.linkflair-horsens .linkflairlabel{background-position:0 -9303px}
+.flair-halifax,.linkflair-halifax .linkflairlabel{background-position:0 -9324px}
+.flair-queretaro{background-position:0 -9345px}
+.flair-tps,.linkflair-tps .linkflairlabel{background-position:0 -9366px}
+.flair-sivasspor,.linkflair-sivasspor .linkflairlabel{background-position:0 -9387px}
+.flair-belenenses,.linkflair-belenenses .linkflairlabel{background-position:0 -9408px}
+.flair-valerenga,.linkflair-valerenga .linkflairlabel{background-position:0 -9429px}
+.flair-newport,.linkflair-newport .linkflairlabel{background-position:0 -9450px}
+.flair-maccabi,.linkflair-maccabi .linkflairlabel{background-position:0 -9471px}
+.flair-gais,.linkflair-gais .linkflairlabel{background-position:0 -9492px}
+.flair-selangor{background-position:0 -9513px}
+.flair-rochdale,.linkflair-rochdale .linkflairlabel{background-position:0 -9534px}
+.flair-northampton,.linkflair-northampton .linkflairlabel{background-position:0 -9555px}
+.flair-rapid-wien,.linkflair-rapid-wien .linkflairlabel{background-position:0 -9576px}
+.flair-macclesfield,.linkflair-macclesfield .linkflairlabel{background-position:0 -9597px}
+.flair-carshalton,.linkflair-carshalton .linkflairlabel{background-position:0 -9618px}
+.flair-costa-rica,.linkflair-costa-rica .linkflairlabel{background-position:0 -9639px}
+.flair-uruguay{background-position:0 -9660px}
+.flair-stade-brest,.linkflair-stade-brest .linkflairlabel{background-position:0 -9681px}
+.flair-slovan-bratislava{background-position:0 -9702px}
+.flair-barcelona-sc{background-position:0 -9723px}
+.flair-vvv-venlo,.linkflair-vvv-venlo .linkflairlabel{background-position:0 -9744px}
+.flair-dinamo-tbilisi{background-position:0 -9765px}
+.flair-ael,.linkflair-ael .linkflairlabel{background-position:0 -9786px}
+.flair-omonoia,.linkflair-omonoia .linkflairlabel{background-position:0 -9807px}
+.flair-union-berlin,.linkflair-union-berlin .linkflairlabel{background-position:0 -9828px}
+.flair-persepolis{background-position:0 -9849px}
+.flair-academica,.linkflair-academica .linkflairlabel{background-position:0 -9870px}
+.flair-karlsruher-sc{background-position:0 -9891px}
+.flair-saprissa,.linkflair-saprissa .linkflairlabel{background-position:0 -9912px}
+.flair-elgin{background-position:0 -9933px}
+.flair-torquay,.linkflair-torquay .linkflairlabel{background-position:0 -9954px}
+.flair-famagusta,.linkflair-famagusta .linkflairlabel{background-position:0 -9975px}
+.flair-glentoran,.linkflair-glentoran .linkflairlabel{background-position:0 -9996px}
+.flair-luzern,.linkflair-luzern .linkflairlabel{background-position:0 -10017px}
+.flair-atletico-mineiro,.linkflair-atletico-mineiro .linkflairlabel{background-position:0 -10038px}
+.flair-san-jose-clash{background-position:0 -10059px}
+.flair-ny-cosmos-s2,.linkflair-ny-cosmos-s2 .linkflairlabel{background-position:0 -21px}
+.flair-croatia-s2,.linkflair-croatia-s2 .linkflairlabel{background-position:0 -42px}
+.flair-botafogo-s2,.linkflair-botafogo-s2 .linkflairlabel{background-position:0 -63px}
+.flair-raja-club-s2{background-position:0 -84px}
+.flair-poli-timisoara-s2{background-position:0 -105px}
+.flair-bk-hacken-s2,.linkflair-bk-hacken-s2 .linkflairlabel{background-position:0 -126px}
+.flair-colombia-s2,.linkflair-colombia-s2 .linkflairlabel{background-position:0 -147px}
+.flair-salamanca-s2,.linkflair-salamanca-s2 .linkflairlabel{background-position:0 -168px}
+.flair-fortuna-dusseldorf-s2,.linkflair-fortuna-dusseldorf-s2 .linkflairlabel{background-position:0 -189px}
+.flair-fort-lauderdale-strikers-s2,.linkflair-fort-lauderdale-strikers-s2 .linkflairlabel{background-position:0 -210px}
+.flair-mamelodi-sundowns-s2{background-position:0 -231px}
+.flair-sweden-s2,.linkflair-sweden-s2 .linkflairlabel{background-position:0 -252px}
+.flair-bohemians-s2,.linkflair-bohemians-s2 .linkflairlabel{background-position:0 -273px}
+.flair-levante-s2,.linkflair-levante-s2 .linkflairlabel{background-position:0 -294px}
+.flair-asante-kotoko-s2{background-position:0 -315px}
+.flair-esteghlal-s2{background-position:0 -336px}
+.flair-rushden-s2,.linkflair-rushden-s2 .linkflairlabel{background-position:0 -357px}
+.flair-scotland-s2,.linkflair-scotland-s2 .linkflairlabel{background-position:0 -378px}
+.flair-wales-s2,.linkflair-wales-s2 .linkflairlabel{background-position:0 -399px}
+.flair-n-ireland-s2,.linkflair-n-ireland-s2 .linkflairlabel{background-position:0 -420px}
+.flair-turkey-s2,.linkflair-turkey-s2 .linkflairlabel{background-position:0 -441px}
+.flair-greece-s2,.linkflair-greece-s2 .linkflairlabel{background-position:0 -462px}
+.flair-italy-s2,.linkflair-italy-s2 .linkflairlabel{background-position:0 -483px}
+.flair-russia-s2,.linkflair-russia-s2 .linkflairlabel{background-position:0 -504px}
+.flair-portugal-s2,.linkflair-portugal-s2 .linkflairlabel{background-position:0 -525px}
+.flair-olimpia-s2{background-position:0 -546px}
+.flair-guangzhou-evergrande-s2{background-position:0 -567px}
+.flair-magdeburg-s2{background-position:0 -588px}
+.flair-ross-county-s2,.linkflair-ross-county-s2 .linkflairlabel{background-position:0 -609px}
+.flair-derry-city-s2,.linkflair-derry-city-s2 .linkflairlabel{background-position:0 -630px}
+.flair-alemannia-aachen-s2{background-position:0 -651px}
+.flair-kaposvari-s2{background-position:0 -672px}
+.flair-hungary-s2{background-position:0 -693px}
+.flair-cambuur-s2,.linkflair-cambuur-s2 .linkflairlabel{background-position:0 -714px}
+.flair-fh-s2,.linkflair-fh-s2 .linkflairlabel{background-position:0 -735px}
+.flair-fc-seoul-s2,.linkflair-fc-seoul-s2 .linkflairlabel{background-position:0 -756px}
+.flair-atletico-nacional-s2{background-position:0 -777px}
+.flair-valur-s2,.linkflair-valur-s2 .linkflairlabel{background-position:0 -798px}
+.flair-cambridge-utd-s2,.linkflair-cambridge-utd-s2 .linkflairlabel{background-position:0 -819px}
+.flair-belgrano-s2,.linkflair-belgrano-s2 .linkflairlabel{background-position:0 -840px}
+.flair-zabrze-s2{background-position:0 -861px}
+.flair-gold-coast-utd-s2{background-position:0 -882px}
+.flair-gent-s2,.linkflair-gent-s2 .linkflairlabel{background-position:0 -903px}
+.flair-haugesund-s2,.linkflair-haugesund-s2 .linkflairlabel{background-position:0 -924px}
+.flair-crawley-s2,.linkflair-crawley-s2 .linkflairlabel{background-position:0 -945px}
+.flair-saarbrucken-s2{background-position:0 -966px}
+.flair-chesterfield-s2,.linkflair-chesterfield-s2 .linkflairlabel{background-position:0 -987px}
+.flair-san-antonio-scorpions-s2,.linkflair-san-antonio-scorpions-s2 .linkflairlabel{background-position:0 -1008px}
+.flair-dundalk-s2,.linkflair-dundalk-s2 .linkflairlabel{background-position:0 -1029px}
+.flair-shamrock-rovers-s2,.linkflair-shamrock-rovers-s2 .linkflairlabel{background-position:0 -1050px}
+.flair-bray-wanderers-s2,.linkflair-bray-wanderers-s2 .linkflairlabel{background-position:0 -1071px}
+.flair-monaghan-s2,.linkflair-monaghan-s2 .linkflairlabel{background-position:0 -1092px}
+.flair-waterford-s2,.linkflair-waterford-s2 .linkflairlabel{background-position:0 -1113px}
+.flair-drogheda-s2,.linkflair-drogheda-s2 .linkflairlabel{background-position:0 -1134px}
+.flair-ucd-s2,.linkflair-ucd-s2 .linkflairlabel{background-position:0 -1155px}
+.flair-limerick-s2,.linkflair-limerick-s2 .linkflairlabel{background-position:0 -1176px}
+.flair-albacete-s2{background-position:0 -1197px}
+.flair-alajuelense-s2,.linkflair-alajuelense-s2 .linkflairlabel{background-position:0 -1218px}
+.flair-shillong-lajong-s2{background-position:0 -1239px}
+.flair-atlanta-silverbacks-s2,.linkflair-atlanta-silverbacks-s2 .linkflairlabel{background-position:0 -1260px}
+.flair-albirex-niigata-s2,.linkflair-albirex-niigata-s2 .linkflairlabel{background-position:0 -1281px}
+.flair-avispa-fukuoka-s2,.linkflair-avispa-fukuoka-s2 .linkflairlabel{background-position:0 -1302px}
+.flair-gamba-osaka-s2,.linkflair-gamba-osaka-s2 .linkflairlabel{background-position:0 -1323px}
+.flair-jubilo-iwata-s2,.linkflair-jubilo-iwata-s2 .linkflairlabel{background-position:0 -1344px}
+.flair-kashiwa-reysol-s2,.linkflair-kashiwa-reysol-s2 .linkflairlabel{background-position:0 -1365px}
+.flair-kawasaki-frontale-s2,.linkflair-kawasaki-frontale-s2 .linkflairlabel{background-position:0 -1386px}
+.flair-montedio-yamagata-s2,.linkflair-montedio-yamagata-s2 .linkflairlabel{background-position:0 -1407px}
+.flair-omiya-ardija-s2,.linkflair-omiya-ardija-s2 .linkflairlabel{background-position:0 -1428px}
+.flair-sanfrecce-hiroshima-s2,.linkflair-sanfrecce-hiroshima-s2 .linkflairlabel{background-position:0 -1449px}
+.flair-shimizu-s-pulse-s2,.linkflair-shimizu-s-pulse-s2 .linkflairlabel{background-position:0 -1470px}
+.flair-urawa-red-diamonds-s2,.linkflair-urawa-red-diamonds-s2 .linkflairlabel{background-position:0 -1491px}
+.flair-vegalta-sendai-s2,.linkflair-vegalta-sendai-s2 .linkflairlabel{background-position:0 -1512px}
+.flair-ventforet-kofu-s2,.linkflair-ventforet-kofu-s2 .linkflairlabel{background-position:0 -1533px}
+.flair-vissel-kobe-s2,.linkflair-vissel-kobe-s2 .linkflairlabel{background-position:0 -1554px}
+.flair-yokohama-f-marinos-s2,.linkflair-yokohama-f-marinos-s2 .linkflairlabel{background-position:0 -1575px}
+.flair-busan-i-park-s2,.linkflair-busan-i-park-s2 .linkflairlabel{background-position:0 -1596px}
+.flair-chunnam-dragons-s2,.linkflair-chunnam-dragons-s2 .linkflairlabel{background-position:0 -1617px}
+.flair-daegu-fc-s2,.linkflair-daegu-fc-s2 .linkflairlabel{background-position:0 -1638px}
+.flair-daejeon-citizen-s2,.linkflair-daejeon-citizen-s2 .linkflairlabel{background-position:0 -1659px}
+.flair-gangwon-fc-s2,.linkflair-gangwon-fc-s2 .linkflairlabel{background-position:0 -1680px}
+.flair-gwangju-fc-s2,.linkflair-gwangju-fc-s2 .linkflairlabel{background-position:0 -1701px}
+.flair-gyeongnam-fc-s2,.linkflair-gyeongnam-fc-s2 .linkflairlabel{background-position:0 -1722px}
+.flair-incheon-united-s2,.linkflair-incheon-united-s2 .linkflairlabel{background-position:0 -1743px}
+.flair-jeju-united-s2,.linkflair-jeju-united-s2 .linkflairlabel{background-position:0 -1764px}
+.flair-jeonbuk-s2,.linkflair-jeonbuk-s2 .linkflairlabel{background-position:0 -1785px}
+.flair-sangju-sangmu-s2,.linkflair-sangju-sangmu-s2 .linkflairlabel{background-position:0 -1806px}
+.flair-seongnam-ilhwa-chunma-s2,.linkflair-seongnam-ilhwa-chunma-s2 .linkflairlabel{background-position:0 -1827px}
+.flair-suwon-s2,.linkflair-suwon-s2 .linkflairlabel{background-position:0 -1848px}
+.flair-ulsan-hyundai-s2,.linkflair-ulsan-hyundai-s2 .linkflairlabel{background-position:0 -1869px}
+.flair-al-sadd-s2,.linkflair-al-sadd-s2 .linkflairlabel{background-position:0 -1890px}
+.flair-al-ain-s2,.linkflair-al-ain-s2 .linkflairlabel{background-position:0 -1911px}
+.flair-maccabi-tel-aviv-s2,.linkflair-maccabi-tel-aviv-s2 .linkflairlabel{background-position:0 -1932px}
+.flair-beijing-guoan-s2{background-position:0 -1953px}
+.flair-changchun-yatai-s2{background-position:0 -1974px}
+.flair-chengdu-blades-s2{background-position:0 -1995px}
+.flair-hangzhou-greentown-s2{background-position:0 -2016px}
+.flair-henan-construction-s2{background-position:0 -2037px}
+.flair-jiangsu-sainty-s2{background-position:0 -2058px}
+.flair-liaoning-whowin-s2{background-position:0 -2079px}
+.flair-nanchang-hengyuan-s2{background-position:0 -2100px}
+.flair-qingdao-jonoon-s2{background-position:0 -2121px}
+.flair-guizhou-renhe-s2{background-position:0 -2142px}
+.flair-shandong-luneng-s2{background-position:0 -2163px}
+.flair-shenzhen-ruby-s2{background-position:0 -2184px}
+.flair-tianjin-teda-s2{background-position:0 -2205px}
+.flair-ajaccio-s2,.linkflair-ajaccio-s2 .linkflairlabel{background-position:0 -2226px}
+.flair-dijon-s2{background-position:0 -2247px}
+.flair-evian-s2,.linkflair-evian-s2 .linkflairlabel{background-position:0 -2268px}
+.flair-lorient-s2,.linkflair-lorient-s2 .linkflairlabel{background-position:0 -2289px}
+.flair-nancy-s2{background-position:0 -2310px}
+.flair-ogc-nice-s2{background-position:0 -2331px}
+.flair-valenciennes-s2,.linkflair-valenciennes-s2 .linkflairlabel{background-position:0 -2352px}
+.flair-toulouse-s2,.linkflair-toulouse-s2 .linkflairlabel{background-position:0 -2373px}
+.flair-rennes-s2,.linkflair-rennes-s2 .linkflairlabel{background-position:0 -2394px}
+.flair-chateauroux-s2{background-position:0 -2415px}
+.flair-boulogne-s2{background-position:0 -2436px}
+.flair-nantes-s2,.linkflair-nantes-s2 .linkflairlabel{background-position:0 -2457px}
+.flair-tours-s2{background-position:0 -2478px}
+.flair-reims-s2,.linkflair-reims-s2 .linkflairlabel{background-position:0 -2499px}
+.flair-sedan-s2{background-position:0 -2520px}
+.flair-troyes-s2,.linkflair-troyes-s2 .linkflairlabel{background-position:0 -2541px}
+.flair-amiens-sc-s2{background-position:0 -2562px}
+.flair-le-mans-s2{background-position:0 -2583px}
+.flair-clermont-s2{background-position:0 -2604px}
+.flair-angers-s2{background-position:0 -2625px}
+.flair-arles-s2{background-position:0 -2646px}
+.flair-bastia-s2,.linkflair-bastia-s2 .linkflairlabel{background-position:0 -2667px}
+.flair-guingamp-s2{background-position:0 -2688px}
+.flair-laval-s2{background-position:0 -2709px}
+.flair-istres-s2{background-position:0 -2730px}
+.flair-lokomotiv-s2,.linkflair-lokomotiv-s2 .linkflairlabel{background-position:0 -2751px}
+.flair-amkar-perm-s2,.linkflair-amkar-perm-s2 .linkflairlabel{background-position:0 -2772px}
+.flair-anzhi-s2,.linkflair-anzhi-s2 .linkflairlabel{background-position:0 -2793px}
+.flair-krasnodar-s2,.linkflair-krasnodar-s2 .linkflairlabel{background-position:0 -2814px}
+.flair-krylia-sovetov-s2,.linkflair-krylia-sovetov-s2 .linkflairlabel{background-position:0 -2835px}
+.flair-kuban-s2,.linkflair-kuban-s2 .linkflairlabel{background-position:0 -2856px}
+.flair-spartak-nalchik-s2,.linkflair-spartak-nalchik-s2 .linkflairlabel{background-position:0 -2877px}
+.flair-terek-s2,.linkflair-terek-s2 .linkflairlabel{background-position:0 -2898px}
+.flair-tom-s2,.linkflair-tom-s2 .linkflairlabel{background-position:0 -2919px}
+.flair-volga-s2,.linkflair-volga-s2 .linkflairlabel{background-position:0 -2940px}
+.flair-air-india-s2{background-position:0 -2961px}
+.flair-chirag-united-s2{background-position:0 -2982px}
+.flair-churchill-brothers-s2{background-position:0 -3003px}
+.flair-dempo-s2{background-position:0 -3024px}
+.flair-hal-s2{background-position:0 -3045px}
+.flair-mohun-bagan-s2{background-position:0 -3066px}
+.flair-mumbai-s2{background-position:0 -3087px}
+.flair-pailan-arrows-s2{background-position:0 -3108px}
+.flair-prayag-united-s2{background-position:0 -3129px}
+.flair-pune-s2,.linkflair-pune-s2 .linkflairlabel{background-position:0 -3150px}
+.flair-salgaocar-s2{background-position:0 -3171px}
+.flair-mc-alger-s2{background-position:0 -3192px}
+.flair-usm-alger-s2{background-position:0 -3213px}
+.flair-ce-belouizdad-s2{background-position:0 -3234px}
+.flair-mc-oran-s2{background-position:0 -3255px}
+.flair-es-setif-s2{background-position:0 -3276px}
+.flair-aso-chlef-s2{background-position:0 -3297px}
+.flair-na-hussein-dey-s2{background-position:0 -3318px}
+.flair-asm-oran-s2{background-position:0 -3339px}
+.flair-zamalek-s2{background-position:0 -3360px}
+.flair-ismaily-s2{background-position:0 -3381px}
+.flair-tersana-s2{background-position:0 -3402px}
+.flair-al-masry-s2{background-position:0 -3423px}
+.flair-far-rabat-s2{background-position:0 -3444px}
+.flair-kac-kentira-s2{background-position:0 -3465px}
+.flair-mas-fez-s2{background-position:0 -3486px}
+.flair-hassania-agadir-s2{background-position:0 -3507px}
+.flair-esperance-tunis-s2{background-position:0 -3528px}
+.flair-club-africain-s2{background-position:0 -3549px}
+.flair-sfaxien-s2{background-position:0 -3570px}
+.flair-stade-tunisien-s2{background-position:0 -3591px}
+.flair-aris-s2,.linkflair-aris-s2 .linkflairlabel{background-position:0 -3612px}
+.flair-honved-s2{background-position:0 -3633px}
+.flair-ferencvarosi-s2{background-position:0 -3654px}
+.flair-ujpest-s2{background-position:0 -3675px}
+.flair-mtk-budapest-s2{background-position:0 -3696px}
+.flair-debrecen-s2{background-position:0 -3717px}
+.flair-gyori-s2{background-position:0 -3738px}
+.flair-rapid-bucuresti-s2{background-position:0 -3759px}
+.flair-fus-rabat-s2{background-position:0 -3780px}
+.flair-wydad-fes-s2{background-position:0 -3801px}
+.flair-bizertin-s2{background-position:0 -3822px}
+.flair-monastir-s2{background-position:0 -3843px}
+.flair-etoile-sahel-s2{background-position:0 -3864px}
+.flair-otelul-galati-s2{background-position:0 -3885px}
+.flair-bate-s2,.linkflair-bate-s2 .linkflairlabel{background-position:0 -3906px}
+.flair-viktoria-plzen-s2,.linkflair-viktoria-plzen-s2 .linkflairlabel{background-position:0 -3927px}
+.flair-vorskla-s2,.linkflair-vorskla-s2 .linkflairlabel{background-position:0 -3948px}
+.flair-vaslui-s2{background-position:0 -3969px}
+.flair-salzburg-s2,.linkflair-salzburg-s2 .linkflairlabel{background-position:0 -3990px}
+.flair-austria-wien-s2,.linkflair-austria-wien-s2 .linkflairlabel{background-position:0 -4011px}
+.flair-aek-lanarca-s2,.linkflair-aek-lanarca-s2 .linkflairlabel{background-position:0 -4032px}
+.flair-elfsborg-s2,.linkflair-elfsborg-s2 .linkflairlabel{background-position:0 -4053px}
+.flair-norrkoping-s2,.linkflair-norrkoping-s2 .linkflairlabel{background-position:0 -4074px}
+.flair-orgryte-s2,.linkflair-orgryte-s2 .linkflairlabel{background-position:0 -4095px}
+.flair-union-saint-gilloise-s2,.linkflair-union-saint-gilloise-s2 .linkflairlabel{background-position:0 -4116px}
+.flair-carolina-railhawks-s2,.linkflair-carolina-railhawks-s2 .linkflairlabel{background-position:0 -4137px}
+.flair-fc-edmonton-s2{background-position:0 -4158px}
+.flair-north-sound-seawolves-s2,.linkflair-north-sound-seawolves-s2 .linkflairlabel{background-position:0 -4179px}
+.flair-puerto-rico-islanders-s2,.linkflair-puerto-rico-islanders-s2 .linkflairlabel{background-position:0 -4200px}
+.flair-antigua-barracuda-s2,.linkflair-antigua-barracuda-s2 .linkflairlabel{background-position:0 -4221px}
+.flair-charleston-battery-s2,.linkflair-charleston-battery-s2 .linkflairlabel{background-position:0 -4242px}
+.flair-charlotte-eagles-s2,.linkflair-charlotte-eagles-s2 .linkflairlabel{background-position:0 -4263px}
+.flair-dayton-dutch-lions-s2,.linkflair-dayton-dutch-lions-s2 .linkflairlabel{background-position:0 -4284px}
+.flair-fc-new-york-s2{background-position:0 -4305px}
+.flair-harrisburg-city-islanders-s2,.linkflair-harrisburg-city-islanders-s2 .linkflairlabel{background-position:0 -4326px}
+.flair-la-blues-s2,.linkflair-la-blues-s2 .linkflairlabel{background-position:0 -4347px}
+.flair-pittsburgh-riverhounds-s2,.linkflair-pittsburgh-riverhounds-s2 .linkflairlabel{background-position:0 -4368px}
+.flair-richmond-kickers-s2,.linkflair-richmond-kickers-s2 .linkflairlabel{background-position:0 -4389px}
+.flair-rochester-rhinos-s2,.linkflair-rochester-rhinos-s2 .linkflairlabel{background-position:0 -4410px}
+.flair-wilmington-hammerheads-s2,.linkflair-wilmington-hammerheads-s2 .linkflairlabel{background-position:0 -4431px}
+.flair-al-wahdat-s2{background-position:0 -4452px}
+.flair-al-faisaly-s2{background-position:0 -4473px}
+.flair-rekreativo-banja-luka-s2{background-position:0 -4494px}
+.flair-tp-mazembe-s2,.linkflair-tp-mazembe-s2 .linkflairlabel{background-position:0 -4515px}
+.flair-st-gallen-s2,.linkflair-st-gallen-s2 .linkflairlabel{background-position:0 -4536px}
+.flair-cercle-brugge-s2,.linkflair-cercle-brugge-s2 .linkflairlabel{background-position:0 -4557px}
+.flair-lokeren-s2,.linkflair-lokeren-s2 .linkflairlabel{background-position:0 -4578px}
+.flair-mechelen-s2,.linkflair-mechelen-s2 .linkflairlabel{background-position:0 -4599px}
+.flair-westerlo-s2,.linkflair-westerlo-s2 .linkflairlabel{background-position:0 -4620px}
+.flair-finland-s2{background-position:0 -4641px}
+.flair-qadsia-s2{background-position:0 -4662px}
+.flair-kuwait-sc-s2{background-position:0 -4683px}
+.flair-kazma-s2{background-position:0 -4704px}
+.flair-al-arabi-kwt-s2{background-position:0 -4725px}
+.flair-darlington-s2{background-position:0 -4746px}
+.flair-tsv-munchen-s2,.linkflair-tsv-munchen-s2 .linkflairlabel{background-position:0 -4767px}
+.flair-den-bosch-s2,.linkflair-den-bosch-s2 .linkflairlabel{background-position:0 -4788px}
+.flair-de-graafschap-s2,.linkflair-de-graafschap-s2 .linkflairlabel{background-position:0 -4809px}
+.flair-excelsior-s2,.linkflair-excelsior-s2 .linkflairlabel{background-position:0 -4830px}
+.flair-nac-breda-s2,.linkflair-nac-breda-s2 .linkflairlabel{background-position:0 -4851px}
+.flair-rkc-waalwijk-s2,.linkflair-rkc-waalwijk-s2 .linkflairlabel{background-position:0 -4872px}
+.flair-nec-s2,.linkflair-nec-s2 .linkflairlabel{background-position:0 -4893px}
+.flair-histon-s2,.linkflair-histon-s2 .linkflairlabel{background-position:0 -4914px}
+.flair-slovenia-s2{background-position:0 -4935px}
+.flair-slovakia-s2{background-position:0 -4956px}
+.flair-sporting-cristal-s2{background-position:0 -4977px}
+.flair-lillestrom-s2,.linkflair-lillestrom-s2 .linkflairlabel{background-position:0 -4998px}
+.flair-catalonia-s2{background-position:0 -5019px}
+.flair-poland-s2,.linkflair-poland-s2 .linkflairlabel{background-position:0 -5040px}
+.flair-india-s2,.linkflair-india-s2 .linkflairlabel{background-position:0 -5061px}
+.flair-al-ansar-s2{background-position:0 -5082px}
+.flair-nejmeh-s2{background-position:0 -5103px}
+.flair-gloucester-city-s2,.linkflair-gloucester-city-s2 .linkflairlabel{background-position:0 -5124px}
+.flair-rayo-vallecano-s2,.linkflair-rayo-vallecano-s2 .linkflairlabel{background-position:0 -5145px}
+.flair-colwyn-bay-s2,.linkflair-colwyn-bay-s2 .linkflairlabel{background-position:0 -5166px}
+.flair-clyde-s2{background-position:0 -5187px}
+.flair-ir-s2,.linkflair-ir-s2 .linkflairlabel{background-position:0 -5208px}
+.flair-olimpija-ljubljana-s2{background-position:0 -5229px}
+.flair-sv-austria-salzburg-s2,.linkflair-sv-austria-salzburg-s2 .linkflairlabel{background-position:0 -5250px}
+.flair-veracruz-s2{background-position:0 -5271px}
+.flair-la-firpo-s2{background-position:0 -5292px}
+.flair-trento-s2{background-position:0 -5313px}
+.flair-lyngby-s2,.linkflair-lyngby-s2 .linkflairlabel{background-position:0 -5334px}
+.flair-pro-vercelli-s2,.linkflair-pro-vercelli-s2 .linkflairlabel{background-position:0 -5355px}
+.flair-farnborough-s2,.linkflair-farnborough-s2 .linkflairlabel{background-position:0 -5376px}
+.flair-gif-sundsvall-s2,.linkflair-gif-sundsvall-s2 .linkflairlabel{background-position:0 -5397px}
+.flair-al-ahli-s2{background-position:0 -5418px}
+.flair-keflavik-s2,.linkflair-keflavik-s2 .linkflairlabel{background-position:0 -5439px}
+.flair-fortuna-sittard-s2,.linkflair-fortuna-sittard-s2 .linkflairlabel{background-position:0 -5460px}
+.flair-fresno-fuego-s2,.linkflair-fresno-fuego-s2 .linkflairlabel{background-position:0 -5481px}
+.flair-junior-s2{background-position:0 -5502px}
+.flair-crusaders-s2,.linkflair-crusaders-s2 .linkflairlabel{background-position:0 -5523px}
+.flair-haka-s2,.linkflair-haka-s2 .linkflairlabel{background-position:0 -5544px}
+.flair-greuther-furth-s2,.linkflair-greuther-furth-s2 .linkflairlabel{background-position:0 -5565px}
+.flair-celik-s2{background-position:0 -5586px}
+.flair-strongest-s2,.linkflair-strongest-s2 .linkflairlabel{background-position:0 -5607px}
+.flair-kickers-offenbach-s2{background-position:0 -5628px}
+.flair-canberra-united-s2{background-position:0 -5649px}
+.flair-jamaica-s2{background-position:0 -5670px}
+.flair-austria-s2,.linkflair-austria-s2 .linkflairlabel{background-position:0 -5691px}
+.flair-shooting-stars-s2{background-position:0 -5712px}
+.flair-nigeria-s2{background-position:0 -5733px}
+.flair-enyimba-s2{background-position:0 -5754px}
+.flair-kano-pillars-s2{background-position:0 -5775px}
+.flair-partick-thistle-s2{background-position:0 -5796px}
+.flair-lebanon-s2{background-position:0 -5817px}
+.flair-orlando-pirates-s2{background-position:0 -5838px}
+.flair-algeria-s2{background-position:0 -5859px}
+.flair-bahrain-s2,.linkflair-bahrain-s2 .linkflairlabel{background-position:0 -5880px}
+.flair-belgium-s2,.linkflair-belgium-s2 .linkflairlabel{background-position:0 -5901px}
+.flair-bulgaria-s2{background-position:0 -5922px}
+.flair-china-s2,.linkflair-china-s2 .linkflairlabel{background-position:0 -5943px}
+.flair-cyprus-s2{background-position:0 -5964px}
+.flair-egypt-s2{background-position:0 -5985px}
+.flair-ghana-s2{background-position:0 -6006px}
+.flair-iran-s2,.linkflair-iran-s2 .linkflairlabel{background-position:0 -6027px}
+.flair-jordan-s2,.linkflair-jordan-s2 .linkflairlabel{background-position:0 -6048px}
+.flair-lithuania-s2{background-position:0 -6069px}
+.flair-morocco-s2{background-position:0 -6090px}
+.flair-qatar-s2,.linkflair-qatar-s2 .linkflairlabel{background-position:0 -6111px}
+.flair-romania-s2{background-position:0 -6132px}
+.flair-singapore-s2,.linkflair-singapore-s2 .linkflairlabel{background-position:0 -6153px}
+.flair-tunisia-s2{background-position:0 -6174px}
+.flair-iraq-s2,.linkflair-iraq-s2 .linkflairlabel{background-position:0 -6195px}
+.flair-norway-s2,.linkflair-norway-s2 .linkflairlabel{background-position:0 -6216px}
+.flair-uae-s2,.linkflair-uae-s2 .linkflairlabel{background-position:0 -6237px}
+.flair-czech-republic-s2,.linkflair-czech-republic-s2 .linkflairlabel{background-position:0 -6258px}
+.flair-iceland-s2{background-position:0 -6279px}
+.flair-kuwait-s2,.linkflair-kuwait-s2 .linkflairlabel{background-position:0 -6300px}
+.flair-canada-s2,.linkflair-canada-s2 .linkflairlabel{background-position:0 -6321px}
+.flair-comunicaciones-s2{background-position:0 -6342px}
+.flair-municipal-s2{background-position:0 -6363px}
+.flair-venezia-s2,.linkflair-venezia-s2 .linkflairlabel{background-position:0 -6384px}
+.flair-guatemala-s2{background-position:0 -6405px}
+.flair-saudi-arabia-s2,.linkflair-saudi-arabia-s2 .linkflairlabel{background-position:0 -6426px}
+.flair-cote-d-ivoire-s2,.linkflair-cote-d-ivoire-s2 .linkflairlabel{background-position:0 -6447px}
+.flair-ecuador-s2{background-position:0 -6468px}
+.flair-venezuela-s2{background-position:0 -6489px}
+.flair-paraguay-s2{background-position:0 -6510px}
+.flair-el-salvador-s2{background-position:0 -6531px}
+.flair-georgia-s2{background-position:0 -6552px}
+.flair-kr-s2,.linkflair-kr-s2 .linkflairlabel{background-position:0 -6573px}
+.flair-fylkir-s2,.linkflair-fylkir-s2 .linkflairlabel{background-position:0 -6594px}
+.flair-dundee-s2,.linkflair-dundee-s2 .linkflairlabel{background-position:0 -6615px}
+.flair-moghreb-tetouan-s2{background-position:0 -6636px}
+.flair-cerro-porteno-s2{background-position:0 -6657px}
+.flair-nacional-s2{background-position:0 -6678px}
+.flair-belarus-s2,.linkflair-belarus-s2 .linkflairlabel{background-position:0 -6699px}
+.flair-switzerland-s2,.linkflair-switzerland-s2 .linkflairlabel{background-position:0 -6720px}
+.flair-bolivia-s2,.linkflair-bolivia-s2 .linkflairlabel{background-position:0 -6741px}
+.flair-ukraine-s2,.linkflair-ukraine-s2 .linkflairlabel{background-position:0 -6762px}
+.flair-hanau-93-s2{background-position:0 -6783px}
+.flair-sagan-tosu-s2,.linkflair-sagan-tosu-s2 .linkflairlabel{background-position:0 -6804px}
+.flair-randers-fc-s2,.linkflair-randers-fc-s2 .linkflairlabel{background-position:0 -6825px}
+.flair-fredrikstad-s2,.linkflair-fredrikstad-s2 .linkflairlabel{background-position:0 -6846px}
+.flair-vikingur-s2,.linkflair-vikingur-s2 .linkflairlabel{background-position:0 -6867px}
+.flair-jagiellonia-s2{background-position:0 -6888px}
+.flair-newells-old-boys-s2,.linkflair-newells-old-boys-s2 .linkflairlabel{background-position:0 -6909px}
+.flair-jef-united-s2{background-position:0 -6930px}
+.flair-ohl-s2,.linkflair-ohl-s2 .linkflairlabel{background-position:0 -6951px}
+.flair-detroit-city-s2,.linkflair-detroit-city-s2 .linkflairlabel{background-position:0 -6972px}
+.flair-altrincham-s2,.linkflair-altrincham-s2 .linkflairlabel{background-position:0 -6993px}
+.flair-las-palmas-s2,.linkflair-las-palmas-s2 .linkflairlabel{background-position:0 -7014px}
+.flair-kidderminster-s2,.linkflair-kidderminster-s2 .linkflairlabel{background-position:0 -7035px}
+.flair-armenia-s2,.linkflair-armenia-s2 .linkflairlabel{background-position:0 -7056px}
+.flair-burton-albion-s2,.linkflair-burton-albion-s2 .linkflairlabel{background-position:0 -7077px}
+.flair-sabah-s2{background-position:0 -7098px}
+.flair-botswana-s2{background-position:0 -7119px}
+.flair-botswana-meat-s2{background-position:0 -7140px}
+.flair-tigre-s2,.linkflair-tigre-s2 .linkflairlabel{background-position:0 -7161px}
+.flair-sandnessjoen-s2,.linkflair-sandnessjoen-s2 .linkflairlabel{background-position:0 -7182px}
+.flair-indonesia-s2,.linkflair-indonesia-s2 .linkflairlabel{background-position:0 -7203px}
+.flair-totton-s2,.linkflair-totton-s2 .linkflairlabel{background-position:0 -7224px}
+.flair-mohammedan-sc-s2{background-position:0 -7245px}
+.flair-eintracht-braunschweig-s2,.linkflair-eintracht-braunschweig-s2 .linkflairlabel{background-position:0 -7266px}
+.flair-podbeskidzie-s2{background-position:0 -7287px}
+.flair-stjarnan-s2,.linkflair-stjarnan-s2 .linkflairlabel{background-position:0 -7308px}
+.flair-chernomorets-s2{background-position:0 -7329px}
+.flair-sepahan-s2{background-position:0 -7350px}
+.flair-deportes-tolima-s2{background-position:0 -7371px}
+.flair-sirius-s2,.linkflair-sirius-s2 .linkflairlabel{background-position:0 -7392px}
+.flair-monagas-s2{background-position:0 -7413px}
+.flair-deportivo-tachira-s2{background-position:0 -7434px}
+.flair-mineros-de-guayana-s2{background-position:0 -7455px}
+.flair-deportivo-lara-s2{background-position:0 -7476px}
+.flair-nk-domzale-s2{background-position:0 -7497px}
+.flair-sri-lanka-s2{background-position:0 -7518px}
+.flair-kedah-fa-s2{background-position:0 -7539px}
+.flair-queens-park-s2{background-position:0 -7560px}
+.flair-accrington-stanley-s2,.linkflair-accrington-stanley-s2 .linkflairlabel{background-position:0 -7581px}
+.flair-estudiantes-s2,.linkflair-estudiantes-s2 .linkflairlabel{background-position:0 -7602px}
+.flair-paderborn-s2{background-position:0 -7623px}
+.flair-latvia-s2{background-position:0 -7644px}
+.flair-fc-tucson-s2,.linkflair-fc-tucson-s2 .linkflairlabel{background-position:0 -7665px}
+.flair-fc-midtjylland-s2,.linkflair-fc-midtjylland-s2 .linkflairlabel{background-position:0 -7686px}
+.flair-lechia-gdansk-s2{background-position:0 -7707px}
+.flair-atletico-paranaense-s2,.linkflair-atletico-paranaense-s2 .linkflairlabel{background-position:0 -7728px}
+.flair-hb-koge-s2,.linkflair-hb-koge-s2 .linkflairlabel{background-position:0 -7749px}
+.flair-cameroon-s2{background-position:0 -7770px}
+.flair-gabon-s2{background-position:0 -7791px}
+.flair-senegal-s2{background-position:0 -7812px}
+.flair-north-korea-s2{background-position:0 -7833px}
+.flair-vila-nova-s2,.linkflair-vila-nova-s2 .linkflairlabel{background-position:0 -7854px}
+.flair-ssv-ulm-s2{background-position:0 -7875px}
+.flair-royal-antwerp-s2,.linkflair-royal-antwerp-s2 .linkflairlabel{background-position:0 -7896px}
+.flair-msv-duisburg-s2{background-position:0 -7917px}
+.flair-hapoel-katamon-s2,.linkflair-hapoel-katamon-s2 .linkflairlabel{background-position:0 -7938px}
+.flair-winterthur-s2,.linkflair-winterthur-s2 .linkflairlabel{background-position:0 -7959px}
+.flair-fc-nordsjalland-s2,.linkflair-fc-nordsjalland-s2 .linkflairlabel{background-position:0 -7980px}
+.flair-finn-harps-s2,.linkflair-finn-harps-s2 .linkflairlabel{background-position:0 -8001px}
+.flair-shrewsbury-town-s2,.linkflair-shrewsbury-town-s2 .linkflairlabel{background-position:0 -8022px}
+.flair-wacker-innsbruck-s2,.linkflair-wacker-innsbruck-s2 .linkflairlabel{background-position:0 -8043px}
+.flair-coleraine-s2,.linkflair-coleraine-s2 .linkflairlabel{background-position:0 -8064px}
+.flair-tampico-madero-s2{background-position:0 -8085px}
+.flair-vitoria-s2,.linkflair-vitoria-s2 .linkflairlabel{background-position:0 -8106px}
+.flair-thailand-s2,.linkflair-thailand-s2 .linkflairlabel{background-position:0 -8127px}
+.flair-bbcu-s2{background-position:0 -8148px}
+.flair-palestine-s2,.linkflair-palestine-s2 .linkflairlabel{background-position:0 -8169px}
+.flair-new-caledonia-s2{background-position:0 -8190px}
+.flair-liberia-s2{background-position:0 -8211px}
+.flair-botev-plovdiv-s2{background-position:0 -8232px}
+.flair-rot-weiss-essen-s2{background-position:0 -8253px}
+.flair-luxembourg-s2{background-position:0 -8274px}
+.flair-matsumoto-yamaga-s2,.linkflair-matsumoto-yamaga-s2 .linkflairlabel{background-position:0 -8295px}
+.flair-arbroath-s2{background-position:0 -8316px}
+.flair-darmstadt-98-s2{background-position:0 -8337px}
+.flair-nepal-s2,.linkflair-nepal-s2 .linkflairlabel{background-position:0 -8358px}
+.flair-viktoria-zizkov-s2,.linkflair-viktoria-zizkov-s2 .linkflairlabel{background-position:0 -8379px}
+.flair-invincible-xi-s2{background-position:0 -8400px}
+.flair-western-sydney-wanderers-s2,.linkflair-western-sydney-wanderers-s2 .linkflairlabel{background-position:0 -8421px}
+.flair-torino-s2,.linkflair-torino-s2 .linkflairlabel{background-position:0 -8442px}
+.flair-al-ahli-sc-s2{background-position:0 -8463px}
+.flair-libertad-s2{background-position:0 -8484px}
+.flair-badajoz-s2{background-position:0 -8505px}
+.flair-libya-s2{background-position:0 -8526px}
+.flair-al-ahly-benghazi-s2{background-position:0 -8547px}
+.flair-macedonia-s2{background-position:0 -8568px}
+.flair-fk-vardar-s2{background-position:0 -8589px}
+.flair-vikingur-gota-s2{background-position:0 -8610px}
+.flair-blyth-spartans-s2,.linkflair-blyth-spartans-s2 .linkflairlabel{background-position:0 -8631px}
+.flair-emelec-s2{background-position:0 -8652px}
+.flair-al-ahly-tripoli-s2{background-position:0 -8673px}
+.flair-coritiba-s2,.linkflair-coritiba-s2 .linkflairlabel{background-position:0 -8694px}
+.flair-helmond-sport-s2,.linkflair-helmond-sport-s2 .linkflairlabel{background-position:0 -8715px}
+.flair-silkeborg-s2,.linkflair-silkeborg-s2 .linkflairlabel{background-position:0 -8736px}
+.flair-boavista-s2,.linkflair-boavista-s2 .linkflairlabel{background-position:0 -8757px}
+.flair-fc-buffalo-s2,.linkflair-fc-buffalo-s2 .linkflairlabel{background-position:0 -8778px}
+.flair-forest-city-london-s2{background-position:0 -8799px}
+.flair-vps-s2,.linkflair-vps-s2 .linkflairlabel{background-position:0 -8820px}
+.flair-skonto-s2{background-position:0 -8841px}
+.flair-pahang-fa-s2{background-position:0 -8862px}
+.flair-cobreloa-s2,.linkflair-cobreloa-s2 .linkflairlabel{background-position:0 -8883px}
+.flair-hifk-s2{background-position:0 -8904px}
+.flair-oman-s2,.linkflair-oman-s2 .linkflairlabel{background-position:0 -8925px}
+.flair-goias-s2,.linkflair-goias-s2 .linkflairlabel{background-position:0 -8946px}
+.flair-malta-s2{background-position:0 -8967px}
+.flair-america-de-cali-s2{background-position:0 -8988px}
+.flair-larne-s2,.linkflair-larne-s2 .linkflairlabel{background-position:0 -9009px}
+.flair-cesena-s2,.linkflair-cesena-s2 .linkflairlabel{background-position:0 -9030px}
+.flair-zaglebie-lubin-s2{background-position:0 -9051px}
+.flair-forfar-s2{background-position:0 -9072px}
+.flair-terengganu-s2{background-position:0 -9093px}
+.flair-kalmar-ff-s2,.linkflair-kalmar-ff-s2 .linkflairlabel{background-position:0 -9114px}
+.flair-brunei-dpmm-s2{background-position:0 -9135px}
+.flair-brunei-s2{background-position:0 -9156px}
+.flair-tractor-sazi-s2{background-position:0 -9177px}
+.flair-san-luis-s2{background-position:0 -9198px}
+.flair-corby-town-s2,.linkflair-corby-town-s2 .linkflairlabel{background-position:0 -9219px}
+.flair-sport-recife-s2,.linkflair-sport-recife-s2 .linkflairlabel{background-position:0 -9240px}
+.flair-tyreso-s2,.linkflair-tyreso-s2 .linkflairlabel{background-position:0 -9261px}
+.flair-santa-fe-s2,.linkflair-santa-fe-s2 .linkflairlabel{background-position:0 -9282px}
+.flair-beerschot-s2,.linkflair-beerschot-s2 .linkflairlabel{background-position:0 -9303px}
+.flair-pescara-s2,.linkflair-pescara-s2 .linkflairlabel{background-position:0 -9324px}
+.flair-consadole-sapporo-s2,.linkflair-consadole-sapporo-s2 .linkflairlabel{background-position:0 -9345px}
+.flair-rotherham-s2,.linkflair-rotherham-s2 .linkflairlabel{background-position:0 -9366px}
+.flair-xelaju-s2,.linkflair-xelaju-s2 .linkflairlabel{background-position:0 -9387px}
+.flair-dagenham-redbridge-s2,.linkflair-dagenham-redbridge-s2 .linkflairlabel{background-position:0 -9408px}
+.flair-mypa-s2,.linkflair-mypa-s2 .linkflairlabel{background-position:0 -9429px}
+.flair-rijeka-s2,.linkflair-rijeka-s2 .linkflairlabel{background-position:0 -9450px}
+.flair-energie-cottbus-s2,.linkflair-energie-cottbus-s2 .linkflairlabel{background-position:0 -9471px}
+.flair-oldenburg-s2,.linkflair-oldenburg-s2 .linkflairlabel{background-position:0 -9492px}
+.flair-myanmar-s2{background-position:0 -9513px}
+.flair-kv-s2,.linkflair-kv-s2 .linkflairlabel{background-position:0 -9534px}
+.flair-beira-mar-s2,.linkflair-beira-mar-s2 .linkflairlabel{background-position:0 -9555px}
+.flair-universitatea-craiova-s2{background-position:0 -9576px}
+.flair-woking-s2{background-position:0 -9597px}
+.flair-alania-vladikavkaz-s2{background-position:0 -9618px}
+.flair-honefoss-s2{background-position:0 -9639px}
+.flair-cucuta-deportivo-s2{background-position:0 -9660px}
+.flair-korona-kielce-s2{background-position:0 -9681px}
+.flair-real-oviedo-s2,.linkflair-real-oviedo-s2 .linkflairlabel{background-position:0 -9702px}
+.flair-azerbaijan-s2{background-position:0 -9723px}
+.flair-csms-iasi-s2{background-position:0 -9744px}
+.flair-aldershot-s2{background-position:0 -9765px}
+.flair-syrianska-s2{background-position:0 -9786px}
+.flair-kettering-s2,.linkflair-kettering-s2 .linkflairlabel{background-position:0 -9807px}
+.flair-dynamo-dresden-s2{background-position:0 -9828px}
+.flair-once-caldas-s2{background-position:0 -9849px}
+.flair-chattanooga-fc-s2{background-position:0 -9870px}
+.flair-madison-56ers-s2{background-position:0 -9891px}
+.flair-pec-zwolle-s2{background-position:0 -9912px}
+.flair-cambridge-city-s2{background-position:0 -9933px}
+.flair-hereford-s2{background-position:0 -9954px}
+.flair-nautico-s2{background-position:0 -9975px}
+.flair-wacker-burghausen-s2{background-position:0 -9996px}
+.flair-frem-s2{background-position:0 -10017px}
+.flair-ostersunds-s2{background-position:0 -10038px}
+.flair-lausanne-sport-s2{background-position:0 -10059px}
+.flair-sahdag-s2{background-position:0 -10080px}
+.flair-hamkam-s2{background-position:0 -10101px}
+.flair-zulte-waregem-s2{background-position:0 -10122px}
+.flair-haiti-s2{background-position:0 -10143px}
+.flair-maritimo-s2{background-position:0 -10164px}
+.flair-dorados-de-sinaloa-s2{background-position:0 -10185px}
+.flair-varbergs-bois-s2{background-position:0 -10206px}
+.flair-atromitos-s2{background-position:0 -10227px}
+.flair-dover-s2{background-position:0 -10248px}
+.flair-huesca-s2{background-position:0 -10269px}
+.flair-tarxien-rainbows-s2{background-position:0 -10290px}
+.flair-esbjerg-s2{background-position:0 -10311px}
+.flair-viitorul-s2{background-position:0 -10332px}
+.flair-brann-s3,.linkflair-brann-s3 .linkflairlabel{background-position:0 -21px}
+.flair-tampa-bay-rowdies-s3,.linkflair-tampa-bay-rowdies-s3 .linkflairlabel{background-position:0 -42px}
+.flair-cape-verde-s3{background-position:0 -63px}
+.flair-burkina-faso-s3{background-position:0 -84px}
+.flair-skeid-s3{background-position:0 -105px}
+.flair-virginia-cavalry-s3{background-position:0 -126px}
+.flair-uzbekistan-s4{background-position:0 -21px}
+.flair-bunyodkor-s4{background-position:0 -42px}
+.flair-all-boys-s4,.linkflair-all-boys-s4 .linkflairlabel{background-position:0 -63px}
+.flair-paulton-rovers-s4{background-position:0 -84px}
+.flair-deportivo-quito-s4{background-position:0 -105px}
+.flair-kelantan-s4{background-position:0 -126px}
+.flair-deportivo-independiente-medellin-s4{background-position:0 -147px}
+.flair-holstein-kiel-s4{background-position:0 -168px}
+.flair-mansfield-s4{background-position:0 -189px}
+.flair-cd-olimpia-s4{background-position:0 -210px}
+.flair-landskrona-s4{background-position:0 -231px}
+.flair-gks-katowice-s4{background-position:0 -252px}
+.flair-sfk-lyn-s4{background-position:0 -273px}
+.flair-angola-s4{background-position:0 -294px}
+.flair-mali-s4{background-position:0 -315px}
+.flair-zambia-s4{background-position:0 -336px}
+.flair-togo-s4{background-position:0 -357px}
+.flair-niger-s4{background-position:0 -378px}
+.flair-ethiopia-s4{background-position:0 -399px}
+.flair-congo-dr-s4{background-position:0 -420px}
+.flair-droylsden-s4{background-position:0 -441px}
+.flair-platense-s4,.linkflair-platense-s4 .linkflairlabel{background-position:0 -462px}
+.flair-montevideo-wanderers-s4{background-position:0 -483px}
+.flair-defensor-sporting-s4{background-position:0 -504px}
+.flair-danubio-s4{background-position:0 -525px}
+.flair-everton-s4{background-position:0 -546px}
+.flair-union-espanola-s4,.linkflair-union-espanola-s4 .linkflairlabel{background-position:0 -567px}
+.flair-huachipato-s4{background-position:0 -588px}
+.flair-river-plate-s4{background-position:0 -609px}
+.flair-ohiggins-s4,.linkflair-ohiggins-s4 .linkflairlabel{background-position:0 -630px}
+.flair-ebbsfleet-s4{background-position:0 -651px}
+.flair-odd-s4{background-position:0 -672px}
+.flair-sanat-naft-s4{background-position:0 -693px}
+.flair-petrolul-ploiesti-s4,.linkflair-petrolul-ploiesti-s4 .linkflairlabel{background-position:0 -714px}
+.flair-bangor-s4,.linkflair-bangor-s4 .linkflairlabel{background-position:0 -735px}
+.flair-willem-ii-s4,.linkflair-willem-ii-s4 .linkflairlabel{background-position:0 -756px}
+.flair-america-s4,.linkflair-america-s4 .linkflairlabel{background-position:0 -777px}
+.flair-banik-ostrava-s4,.linkflair-banik-ostrava-s4 .linkflairlabel{background-position:0 -798px}
+.flair-westfalia-herne-s4{background-position:0 -819px}
+.flair-farul-constanta-s4{background-position:0 -840px}
+.flair-ff-jaro-s4,.linkflair-ff-jaro-s4 .linkflairlabel{background-position:0 -861px}
+.flair-arema-s4{background-position:0 -882px}
+.flair-slask-s4,.linkflair-slask-s4 .linkflairlabel{background-position:0 -903px}
+.flair-real-espana-s4{background-position:0 -924px}
+.flair-breidablik-s4{background-position:0 -945px}
+.flair-karsiyaka-s4,.linkflair-karsiyaka-s4 .linkflairlabel{background-position:0 -966px}
+.flair-cliftonville-s4,.linkflair-cliftonville-s4 .linkflairlabel{background-position:0 -987px}
+.flair-wuhan-zall-s4{background-position:0 -1008px}
+.flair-ottawa-fury-s4{background-position:0 -1029px}
+.flair-berekum-chelsea-s4{background-position:0 -1050px}
+.flair-wormatia-worms-s4{background-position:0 -1071px}
+.flair-des-moines-menace-s4{background-position:0 -1092px}
+.flair-bangladesh-s4{background-position:0 -1113px}
+.flair-chester-fc-s4{background-position:0 -1134px}
+.flair-brescia-s4,.linkflair-brescia-s4 .linkflairlabel{background-position:0 -1155px}
+.flair-fc-wil-1900-s4,.linkflair-fc-wil-1900-s4 .linkflairlabel{background-position:0 -1176px}
+.flair-albania-s4{background-position:0 -1197px}
+.flair-deportivo-moron-s4{background-position:0 -1218px}
+.flair-ofk-beograd-s4{background-position:0 -1239px}
+.flair-canterbury-city-s4{background-position:0 -1260px}
+.flair-marine-s4{background-position:0 -1281px}
+.flair-ac-st-louis-s4{background-position:0 -1302px}
+.flair-phoenix-fc-s4{background-position:0 -1323px}
+.flair-fc-santa-claus-s4{background-position:0 -1344px}
+.flair-asteras-tripolis-s4,.linkflair-asteras-tripolis-s4 .linkflairlabel{background-position:0 -1365px}
+.flair-weston-super-mare-s4{background-position:0 -1386px}
+.flair-atvidaberg-s4{background-position:0 -1407px}
+.flair-sv-babelsberg-03-s4{background-position:0 -1428px}
+.flair-bath-city-s4{background-position:0 -1449px}
+.flair-kv-oostende-s4,.linkflair-kv-oostende-s4 .linkflairlabel{background-position:0 -1470px}
+.flair-erzgebirge-aue-s4{background-position:0 -1491px}
+.flair-fleetwood-town-s4{background-position:0 -1512px}
+.flair-chemnitzer-fc-s4{background-position:0 -1533px}
+.flair-bognor-regis-s4{background-position:0 -1554px}
+.flair-lierse-s4,.linkflair-lierse-s4 .linkflairlabel{background-position:0 -1575px}
+.flair-cfc-azul-s4{background-position:0 -1596px}
+.flair-sandnes-ulf-s4,.linkflair-sandnes-ulf-s4 .linkflairlabel{background-position:0 -1617px}
+.flair-lions-xii-s4{background-position:0 -1638px}
+.flair-bodo-glimt-s4,.linkflair-bodo-glimt-s4 .linkflairlabel{background-position:0 -1659px}
+.flair-inter-turku-s4{background-position:0 -1680px}
+.flair-waldhof-mannheim-s4{background-position:0 -1701px}
+.flair-blau-weiss-linz-s4{background-position:0 -1722px}
+.flair-gaziantepspor-s4{background-position:0 -1743px}
+.flair-indy-eleven-s4{background-position:0 -1764px}
+.flair-hamilton-academical-s4{background-position:0 -1785px}
+.flair-hastings-s4{background-position:0 -1806px}
+.flair-elazigspor-s4{background-position:0 -1827px}
+.flair-ik-start-s4,.linkflair-ik-start-s4 .linkflairlabel{background-position:0 -1848px}
+.flair-san-marino-s4{background-position:0 -1869px}
+.flair-vicenza-s4{background-position:0 -1890px}
+.flair-kenya-s4{background-position:0 -1911px}
+.flair-harrogate-s4{background-position:0 -1932px}
+.flair-hayes-s4{background-position:0 -1953px}
+.flair-fjolnir-s4{background-position:0 -1974px}
+.flair-go-ahead-s4,.linkflair-go-ahead-s4 .linkflairlabel{background-position:0 -1995px}
+.flair-valletta-s4{background-position:0 -2016px}
+.flair-psms-s4{background-position:0 -2037px}
+.flair-knoxville-force-s4{background-position:0 -2058px}
+.flair-rops-s4{background-position:0 -2079px}
+.flair-sogndal-s4,.linkflair-sogndal-s4 .linkflairlabel{background-position:0 -2100px}
+.flair-konyaspor-s4{background-position:0 -2121px}
+.flair-maldives-s4{background-position:0 -2142px}
+.flair-tahiti-s4{background-position:0 -2163px}
+.flair-avellino-s4{background-position:0 -2184px}
+.flair-parana-clube-s4{background-position:0 -2205px}
+.flair-kayserispor-s4{background-position:0 -2226px}
+.flair-tulsa-athletics-s4{background-position:0 -2247px}
+.flair-river-city-rovers-s4{background-position:0 -2268px}
+.flair-oklahoma-city-s4{background-position:0 -2289px}
+.flair-lanus-s4{background-position:0 -2310px}
+.flair-athlone-s4,.linkflair-athlone-s4 .linkflairlabel{background-position:0 -2331px}
+.flair-oriente-petrolero-s4{background-position:0 -2352px}
+.flair-gd-chaves-s4{background-position:0 -2373px}
+.flair-el-nacional-s4{background-position:0 -2394px}
+.flair-santiago-wanderers-s4{background-position:0 -2415px}
+.flair-bermuda-s4{background-position:0 -2436px}
+.flair-banfield-s4{background-position:0 -2457px}
+.flair-sacramento-republic-s4{background-position:0 -2478px}
+.flair-gibraltar-s4{background-position:0 -2499px}
+.flair-gefle-s4{background-position:0 -2520px}
+.flair-jorge-wilstermann-s4{background-position:0 -2541px}
+.flair-sarajevo-s4{background-position:0 -2562px}
+.flair-dnipro-s4{background-position:0 -2583px}
+.flair-arsenal-de-sarandi-s4{background-position:0 -2604px}
+.flair-quad-city-eagles-s4{background-position:0 -2625px}
+.flair-kazakhstan-s4{background-position:0 -2646px}
+.flair-shakhter-karagandy-s4{background-position:0 -2667px}
+.flair-brasov-s4{background-position:0 -2688px}
+.flair-ceahlaul-s4{background-position:0 -2709px}
+.flair-first-vienna-s4{background-position:0 -2730px}
+.flair-maidstone-s4{background-position:0 -2751px}
+.flair-avai-s4{background-position:0 -2772px}
+.flair-hong-kong-s4{background-position:0 -2793px}
+.flair-south-china-s4{background-position:0 -2814px}
+.flair-nashville-s4{background-position:0 -2835px}
+.flair-airdrieonians-s4{background-position:0 -2856px}
+.flair-rosario-central-s4{background-position:0 -2877px}
+.flair-portadown-s4{background-position:0 -2898px}
+.flair-turbine-potsdam-s4{background-position:0 -2919px}
+.flair-southport-s4{background-position:0 -2940px}
+.flair-ferro-carril-s4{background-position:0 -2961px}
+.flair-fram-s4{background-position:0 -2982px}
+.flair-guarani--s4{background-position:0 -3003px}
+.flair-arka-gdynia-s4{background-position:0 -3024px}
+.flair-tibet-s4{background-position:0 -3045px}
+.flair-sierra-leone-s4{background-position:0 -3066px}
+.flair-washinton-spirit-s4{background-position:0 -3087px}
+

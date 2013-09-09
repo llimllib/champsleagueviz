@@ -1,0 +1,11 @@
+--2013-09-08 20:56:34--  https://upload.wikimedia.org/wikipedia/en/thumb/9/93/FC_K%C3%B8benhavn.svg/200px-FC_K%C3%B8benhavn.svg.png
+Resolving upload.wikimedia.org... 208.80.154.235, 2620:0:861:ed1a::b
+Connecting to upload.wikimedia.org|208.80.154.235|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 18645 (18K) [image/png]
+Saving to: `200px-FC_K\303\270benhavn.svg.png'
+
+     0K .......... ........                                   100% 62.1K=0.3s
+
+2013-09-08 20:56:35 (62.1 KB/s) - `200px-FC_K\303\270benhavn.svg.png' saved [18645/18645]
+
