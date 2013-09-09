@@ -109,7 +109,7 @@ d3.csv("summary.csv", function(error, csv) {
     html: true,
     title: function() {
       var d = this.__data__;
-      return '<span style="font: 12px sans-serif">' + d.name + '<br>' +
+      return '<span style="font: 12px sans-serif"><strong>' + d.name + '</strong><br><br>' +
       'Median: ' + fmt(d.pct) + '%<br>' +
       'Max: ' + fmt(100/d.min) + '%<br>' + // Max odds == min win %, ya dig?
       'Min: ' + fmt(100/d.max) + '%<br>' +
