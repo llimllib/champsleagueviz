@@ -12,7 +12,11 @@ fixed = []
 for team in teams:
     t = team[0:2]
     for odd in team[2:]:
-        if odd: t.append(float(odd))
+        if odd:
+            o = float(odd)
+            # betdaq lists some impossible odds. WTF?
+            if o < 1: o = 1.
+            t.append(o)
     fixed.append(t)
 
 teams = fixed
