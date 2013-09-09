@@ -7,6 +7,10 @@ body {
 </style>
 <body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="tipsy/javascripts/jquery.tipsy.js"></script>
+<link href="tipsy/stylesheets/tipsy.css" rel="stylesheet" type="text/css" />
+
 <!--<script src="box.js"></script>-->
 <script>
 
@@ -95,8 +99,22 @@ d3.csv("summary.csv", function(error, csv) {
       .attr("y", function(d) { return height - y(d.pct) - (imgsize/2); })
       .attr("width", imgsize)
       .attr("height", imgsize)
-      .attr("xlink:href", function(d) { return "crests/" + sanitize(d.name); })
-      .append("svg:title")
-        .text(function(d) { return d.name; });
+      .attr("xlink:href", function(d) { return "crests/" + sanitize(d.name); });
+
+  // create a formatting function. floats get 2 digits after decimal
+  fmt = d3.format(".2f");
+
+  $('svg image').tipsy({
+    gravity: 'w',
+    html: true,
+    title: function() {
+      var d = this.__data__;
+      return '<span style="font: 12px sans-serif">' + d.name + '<br>' +
+      'Median: ' + fmt(d.pct) + '%<br>' +
+      'Max: ' + fmt(100/d.max) + '%<br>' +
+      'Min: ' + fmt(100/d.min) + '%<br>' +
+      '</span>';
+    }
+  });
 });
 </script>
