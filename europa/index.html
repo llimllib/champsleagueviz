@@ -112,14 +112,6 @@ d3.csv("summary.csv", function(error, csv) {
         .attr("text-anchor", "middle")
         .text(function(d) { return d.name; })
         .style("font", "12px sans-serif");
-  //chart.selectAll("image")
-  //    .data(data)
-  //  .enter().append("svg:image")
-  //    .attr("x", function(d) { return x(d.group) + x.rangeBand()/2 - (imgsize/2); })
-  //    .attr("y", function(d) { return height - y(d.pct) - (imgsize/2); })
-  //    .attr("width", imgsize)
-  //    .attr("height", imgsize)
-  //    .attr("xlink:href", function(d) { return "http://billmill.org/champsleagueviz/crests/" + sanitize(d.name); });
 
   // create a formatting function. floats get 2 digits after decimal
   fmt = d3.format(".2f");
