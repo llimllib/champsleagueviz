@@ -24,7 +24,6 @@ teams = fixed
 summary = []
 for team in teams:
     odds = team[2:]
-    print team[:2]
     max_ = max(odds)
     min_ = min(odds)
     mean = np.mean(odds)
@@ -34,7 +33,7 @@ for team in teams:
 summaryfile = "raw/summary%s.csv" % timestamp
 with file(summaryfile, 'w') as outfile:
     w = csv.writer(outfile)
-    w.writerow(['name', 'group', 'max', 'min', 'mean', 'median'])
+    w.writerow(['name', 'country', 'max', 'min', 'mean', 'median'])
     for row in summary:
         w.writerow(row)
 

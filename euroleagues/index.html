@@ -23,10 +23,10 @@ body {
 <!--<script src="box.js"></script>-->
 <script>
 
-var width = 400,
+var width = 800,
     height = 400,
     mx = 30, //x margin
-    my = 15; //y margin
+    my = 25; //y margin
 
 var chart = d3.select("#chart").append("svg")
     .attr("class", "chart")
@@ -43,7 +43,6 @@ d3.csv("summary.csv", function(error, csv) {
     row.max = parseFloat(row.max);
     row.mean = parseFloat(row.mean);
     row.median = parseFloat(row.median);
-    row.group = row.group.toUpperCase();
     row.pct = 100/row.median;
     //TODO: 25th and 75th
     if (row.pct > 3) {
@@ -52,14 +51,14 @@ d3.csv("summary.csv", function(error, csv) {
   });
   console.log(data);
 
-  var groups = ["A", "B", "C", "D"]
+  var countries = ['Germany', 'Spain', 'England', 'France', 'Italy', 'Scotland', 'Brazil'];
 
   var x = d3.scale.ordinal()
-      .domain(groups)
+      .domain(countries)
       .rangeBands([0, width])
 
   var y = d3.scale.linear()
-    .domain([0, 100])
+    .domain([1, 100])
     .range([0, height])
 
   // y axis ticks
@@ -88,11 +87,11 @@ d3.csv("summary.csv", function(error, csv) {
 
   // x axis labels
   chart.selectAll(".xaxislabel")
-      .data(groups)
+      .data(countries)
     .enter().append("text")
       .attr("class", "xaxislabel")
       .attr("x", function(d) { return x(d) + x.rangeBand()/2; })
-      .attr("y", function() { return my-10; })
+      .attr("y", function() { return my-40; })
       .attr("text-anchor", "middle")
       .style("font", "12px sans-serif")
       .text(String);
@@ -103,19 +102,28 @@ d3.csv("summary.csv", function(error, csv) {
 
   var imgsize = 50;
 
-  chart.selectAll("image")
+   chart.selectAll(".teamname")
       .data(data)
-    .enter().append("svg:image")
-      .attr("x", function(d) { return x(d.group) + x.rangeBand()/2 - (imgsize/2); })
-      .attr("y", function(d) { return height - y(d.pct) - (imgsize/2); })
-      .attr("width", imgsize)
-      .attr("height", imgsize)
-      .attr("xlink:href", function(d) { return "http://billmill.org/champsleagueviz/crests/" + sanitize(d.name); });
+    .enter().append("text")
+        .attr("class", "teamname")
+        .attr("x", function(d) { return x(d.country) + x.rangeBand()/2; })
+        .attr("y", function(d) { return height - y(d.pct); })
+        .attr("text-anchor", "middle")
+        .text(function(d) { return d.name; })
+        .style("font", "12px sans-serif");
+  //chart.selectAll("image")
+  //    .data(data)
+  //  .enter().append("svg:image")
+  //    .attr("x", function(d) { return x(d.country) + x.rangeBand()/2 - (imgsize/2); })
+  //    .attr("y", function(d) { return height - y(d.pct) - (imgsize/2); })
+  //    .attr("width", imgsize)
+  //    .attr("height", imgsize)
+  //    .attr("xlink:href", function(d) { return "http://billmill.org/champsleagueviz/crests/" + sanitize(d.name); });
 
   // create a formatting function. floats get 2 digits after decimal
   fmt = d3.format(".2f");
 
-  $('svg image').tipsy({
+  $('.teamname').tipsy({
     gravity: 'w',
     html: true,
     title: function() {
