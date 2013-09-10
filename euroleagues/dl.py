@@ -1,11 +1,14 @@
 import re, requests, csv, time
 
 teams = []
-for group in ['germany/bundesliga/german-bundesliga',
-              'spain/la-liga-primera/spanish-la-liga-primera',
-              'english/premier-league',
-              'france/ligue-1/french-ligue-1']:
-    url = "http://www.oddschecker.com/football/%s/winner" % group
+for country, urlpart in [('Germany', 'germany/bundesliga/german-bundesliga'),
+                         ('Spain', 'spain/la-liga-primera/spanish-la-liga-primera'),
+                         ('England', 'english/premier-league'),
+                         ('France', 'france/ligue-1/french-ligue-1'),
+                         ('Italy', 'italy/serie-a/italy-serie-a'),
+                         ('Scotland', 'scottish/premiership'),
+                         ('Brazil', 'world/brazil/serie-a/brazil-serie-a')]:
+    url = "http://www.oddschecker.com/football/%s/winner" % urlpart
     print "getting %s" % url
     r = requests.get(url, cookies={"odds_type":"decimal"})
 
@@ -27,11 +30,11 @@ for group in ['germany/bundesliga/german-bundesliga',
             if not c or '-' in c: odds.append(None)
             else:                 odds.append(float(c))
         assert len(odds) == len(sites)
-        teams.append([name, group] + odds)
+        teams.append([name, country] + odds)
 
 t = str(time.time()).split(".")[0]
 with file("raw/odds%s.csv" % t, 'w') as outfile:
     w = csv.writer(outfile)
-    w.writerow(['name', 'group'] + sites)
+    w.writerow(['name', 'country'] + sites)
     for row in teams:
         w.writerow(row)
