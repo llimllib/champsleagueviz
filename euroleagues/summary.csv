@@ -1,0 +1,79 @@
+name,group,max,min,mean,median
+Bayern Munich,germany/bundesliga/german-bundesliga,1.34,1.22,1.2822727272727275,1.29
+Bor Dortmund,germany/bundesliga/german-bundesliga,4.5,3.5,4.0677272727272724,4.0
+Bayer Leverkusen,germany/bundesliga/german-bundesliga,46.0,26.0,31.045454545454547,30.0
+Schalke 04,germany/bundesliga/german-bundesliga,91.0,41.0,67.272727272727266,67.0
+VfL Wolfsburg,germany/bundesliga/german-bundesliga,176.0,67.0,114.77272727272727,101.0
+Werder Bremen,germany/bundesliga/german-bundesliga,475.0,126.0,259.04545454545456,226.0
+Bor Monchengladbach,germany/bundesliga/german-bundesliga,485.0,101.0,212.68181818181819,151.0
+Hamburg,germany/bundesliga/german-bundesliga,760.0,151.0,303.63636363636363,251.0
+VfB Stuttgart,germany/bundesliga/german-bundesliga,501.0,151.0,273.36363636363637,251.0
+Hannover 96,germany/bundesliga/german-bundesliga,801.0,101.0,278.27272727272725,251.0
+Mainz 05,germany/bundesliga/german-bundesliga,801.0,101.0,363.09090909090907,301.0
+Eintracht Frankfurt,germany/bundesliga/german-bundesliga,801.0,201.0,486.36363636363637,501.0
+Hoffenheim,germany/bundesliga/german-bundesliga,801.0,151.0,428.63636363636363,351.0
+Freiburg,germany/bundesliga/german-bundesliga,950.0,251.0,548.22727272727275,501.0
+Hertha Berlin,germany/bundesliga/german-bundesliga,1251.0,151.0,444.90909090909093,373.0
+Nurnberg,germany/bundesliga/german-bundesliga,2501.0,251.0,964.5454545454545,819.5
+Augsburg,germany/bundesliga/german-bundesliga,3001.0,501.0,1453.1818181818182,1376.0
+Braunschweig,germany/bundesliga/german-bundesliga,6001.0,501.0,2885.0,2750.5
+Barcelona,spain/la-liga-primera/spanish-la-liga-primera,1.81,1.57,1.6768181818181818,1.6699999999999999
+Real Madrid,spain/la-liga-primera/spanish-la-liga-primera,2.38,2.1,2.2313636363636364,2.25
+Atletico Madrid,spain/la-liga-primera/spanish-la-liga-primera,67.0,1.36,47.789090909090916,51.0
+Valencia,spain/la-liga-primera/spanish-la-liga-primera,485.0,9.0,205.22727272727272,201.0
+Real Sociedad,spain/la-liga-primera/spanish-la-liga-primera,501.0,12.0,286.0,301.0
+Athl Bilbao,spain/la-liga-primera/spanish-la-liga-primera,751.0,15.0,474.18181818181819,501.0
+Sevilla,spain/la-liga-primera/spanish-la-liga-primera,1251.0,26.0,527.33333333333337,432.0
+Betis,spain/la-liga-primera/spanish-la-liga-primera,1501.0,34.0,754.0454545454545,601.0
+Espanyol,spain/la-liga-primera/spanish-la-liga-primera,2001.0,41.0,1047.7368421052631,1001.0
+Malaga,spain/la-liga-primera/spanish-la-liga-primera,3000.0,51.0,911.66666666666663,703.0
+Celta Vigo,spain/la-liga-primera/spanish-la-liga-primera,3001.0,81.0,1640.578947368421,2001.0
+Villarreal,spain/la-liga-primera/spanish-la-liga-primera,3001.0,34.0,1126.8333333333333,1001.0
+Getafe,spain/la-liga-primera/spanish-la-liga-primera,3500.0,67.0,1613.5263157894738,2001.0
+Valladolid,spain/la-liga-primera/spanish-la-liga-primera,3501.0,154.0,2173.2105263157896,2501.0
+Levante,spain/la-liga-primera/spanish-la-liga-primera,4000.0,126.0,2090.3157894736842,2501.0
+Granada,spain/la-liga-primera/spanish-la-liga-primera,5001.0,101.0,2720.5789473684213,3001.0
+Rayo Vallecano,spain/la-liga-primera/spanish-la-liga-primera,7501.0,151.0,2170.5789473684213,1501.0
+Osasuna,spain/la-liga-primera/spanish-la-liga-primera,7501.0,154.0,3084.1052631578946,3001.0
+Almeria,spain/la-liga-primera/spanish-la-liga-primera,9001.0,154.0,5030.5,5001.0
+Elche,spain/la-liga-primera/spanish-la-liga-primera,9001.0,154.0,5162.6842105263158,5001.0
+Man City,english/premier-league,3.05,2.75,2.9178260869565222,2.8999999999999999
+Chelsea,english/premier-league,3.38,2.88,3.0534782608695652,3.0
+Man Utd,english/premier-league,5.0,4.33,4.8343478260869563,5.0
+Liverpool,english/premier-league,13.0,10.0,12.086956521739131,12.0
+Arsenal,english/premier-league,15.0,12.0,13.382608695652172,13.0
+Tottenham,english/premier-league,23.0,19.0,21.347826086956523,21.0
+Everton,english/premier-league,1001.0,251.0,552.91304347826087,501.0
+Southampton,english/premier-league,2001.0,625.0,1601.5217391304348,1501.0
+Aston Villa,english/premier-league,2001.0,660.0,1546.8695652173913,1501.0
+Swansea,english/premier-league,2501.0,660.0,1655.5652173913043,1501.0
+Fulham,english/premier-league,3001.0,660.0,2199.0434782608695,2001.0
+Newcastle,english/premier-league,3001.0,660.0,1590.3478260869565,1501.0
+West Ham,english/premier-league,3001.0,660.0,2046.8695652173913,2001.0
+West Brom,english/premier-league,4001.0,660.0,2220.782608695652,2001.0
+Norwich,english/premier-league,5001.0,660.0,3548.9545454545455,4001.0
+Stoke,english/premier-league,5001.0,660.0,2776.2272727272725,3000.0
+Sunderland,english/premier-league,5001.0,660.0,3048.9545454545455,3001.0
+Cardiff,english/premier-league,7501.0,660.0,4412.590909090909,5001.0
+Hull,english/premier-league,7501.0,660.0,5685.318181818182,6250.5
+Crystal Palace,english/premier-league,15001.0,660.0,7617.045454545455,7501.0
+PSG,france/ligue-1/french-ligue-1,1.53,1.4,1.4463636363636363,1.4399999999999999
+Monaco,france/ligue-1/french-ligue-1,3.5,3.0,3.2886363636363636,3.29
+Marseille,france/ligue-1/french-ligue-1,48.0,15.0,20.0,15.5
+Lyon,france/ligue-1/french-ligue-1,71.0,26.0,39.727272727272727,37.0
+Lille,france/ligue-1/french-ligue-1,51.0,18.0,42.390909090909091,41.0
+St Etienne,france/ligue-1/french-ligue-1,101.0,51.0,71.590909090909093,67.0
+Rennes,france/ligue-1/french-ligue-1,251.0,64.0,181.09090909090909,176.0
+Bordeaux,france/ligue-1/french-ligue-1,251.0,134.0,210.77272727272728,201.0
+Nice,france/ligue-1/french-ligue-1,301.0,37.0,208.45454545454547,201.0
+Toulouse,france/ligue-1/french-ligue-1,501.0,64.0,384.66666666666669,401.0
+Lorient,france/ligue-1/french-ligue-1,501.0,68.0,328.14285714285717,301.0
+Montpellier,france/ligue-1/french-ligue-1,501.0,98.0,291.22727272727275,251.0
+Bastia,france/ligue-1/french-ligue-1,1001.0,64.0,658.85000000000002,751.0
+Reims,france/ligue-1/french-ligue-1,1001.0,64.0,678.85000000000002,751.0
+Sochaux,france/ligue-1/french-ligue-1,1001.0,64.0,753.85000000000002,801.0
+Valenciennes,france/ligue-1/french-ligue-1,1001.0,64.0,666.35000000000002,751.0
+Ajaccio,france/ligue-1/french-ligue-1,1501.0,64.0,891.35000000000002,1000.5
+Evian,france/ligue-1/french-ligue-1,1501.0,64.0,886.35000000000002,1001.0
+Guingamp,france/ligue-1/french-ligue-1,2001.0,64.0,1148.8499999999999,1126.0
+Nantes,france/ligue-1/french-ligue-1,2001.0,64.0,1130.3157894736842,1251.0
