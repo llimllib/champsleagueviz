@@ -46,7 +46,7 @@ d3.csv("summary.csv", function(error, csv) {
     row.group = row.group.toUpperCase();
     row.pct = 100/row.median;
     //TODO: 25th and 75th
-    if (row.pct > 5) {
+    if (row.pct > 3) {
       data.push(row);
     }
   });
