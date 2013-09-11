@@ -3,7 +3,7 @@ serve:
 
 push:
 	git checkout gh-pages
-	git rebase master
+	git rebase -s recursive -X theirs master
 	git push --force
 	git checkout master
 
