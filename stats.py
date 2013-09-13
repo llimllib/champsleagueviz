@@ -28,12 +28,14 @@ for team in teams:
     min_ = min(odds)
     mean = np.mean(odds)
     median = np.median(odds)
-    summary.append(team[:2] + [max_, min_, mean, median])
+    twentyfive = np.percentile(odds, 25)
+    seventyfive = np.percentile(odds, 75)
+    summary.append(team[:2] + [max_, min_, mean, median, twentyfive, seventyfive])
 
 summaryfile = "raw/summary%s.csv" % timestamp
 with file(summaryfile, 'w') as outfile:
     w = csv.writer(outfile)
-    w.writerow(['name', 'group', 'max', 'min', 'mean', 'median'])
+    w.writerow(['name', 'group', 'max', 'min', 'mean', 'median', 'twentyfive', 'seventyfive'])
     for row in summary:
         w.writerow(row)
 
