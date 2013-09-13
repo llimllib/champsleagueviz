@@ -121,15 +121,42 @@ d3.csv("summary.csv", function(error, csv) {
       .attr("height", imgsize)
       .attr("xlink:href", function(d) { return "http://billmill.org/champsleagueviz/crests/" + sanitize(d.name); });
 
+  var whiskerwidth = 5;
+  var whiskercolor = "#ddd";
+  var offset = 30;
+
   chart.selectAll(".whiskers")
       .data(data)
     .enter().append("line")
-      .attr("class", "yaxistick")
-      .attr("x1", function(d) { return x(d.group) + x.rangeBand()/2 - (imgsize/2); })
-      .attr("x2", function(d) { return x(d.group) + x.rangeBand()/2 - (imgsize/2); })
+      .attr("class", ".whiskers")
+      .attr("x1", function(d) { return x(d.group) + x.rangeBand()/2 - offset; })
+      .attr("x2", function(d) { return x(d.group) + x.rangeBand()/2 - offset; })
       .attr("y1", function(d) { return height - y(d.pct25); })
       .attr("y2", function(d) { return height - y(d.pct75); })
-      .style("stroke", "#666");
+      .style("stroke", whiskercolor)
+      .style("stroke-width", "2")
+
+  chart.selectAll(".whiskers")
+      .data(data)
+    .enter().append("line")
+      .attr("class", ".whiskers")
+      .attr("x1", function(d) { return x(d.group) + x.rangeBand()/2 - offset - whiskerwidth; })
+      .attr("x2", function(d) { return x(d.group) + x.rangeBand()/2 - offset + whiskerwidth; })
+      .attr("y1", function(d) { return height - y(d.pct25); })
+      .attr("y2", function(d) { return height - y(d.pct25); })
+      .style("stroke", whiskercolor)
+      .style("stroke-width", "2");
+
+  chart.selectAll(".whiskers")
+      .data(data)
+    .enter().append("line")
+      .attr("class", ".whiskers")
+      .attr("x1", function(d) { return x(d.group) + x.rangeBand()/2 - offset - whiskerwidth; })
+      .attr("x2", function(d) { return x(d.group) + x.rangeBand()/2 - offset + whiskerwidth; })
+      .attr("y1", function(d) { return height - y(d.pct75); })
+      .attr("y2", function(d) { return height - y(d.pct75); })
+      .style("stroke", whiskercolor)
+      .style("stroke-width", "2");
 
   // create a formatting function. floats get 2 digits after decimal
   fmt = d3.format(".2f");
