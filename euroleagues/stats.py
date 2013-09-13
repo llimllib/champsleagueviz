@@ -35,7 +35,7 @@ for team in teams:
 summaryfile = "raw/summary%s.csv" % timestamp
 with file(summaryfile, 'w') as outfile:
     w = csv.writer(outfile)
-    w.writerow(['name', 'group', 'max', 'min', 'mean', 'median', 'twentyfive', 'seventyfive'])
+    w.writerow(['name', 'country', 'max', 'min', 'mean', 'median', 'twentyfive', 'seventyfive'])
     for row in summary:
         w.writerow(row)
 

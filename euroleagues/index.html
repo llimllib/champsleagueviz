@@ -43,6 +43,8 @@ d3.csv("summary.csv", function(error, csv) {
     row.max = parseFloat(row.max);
     row.mean = parseFloat(row.mean);
     row.median = parseFloat(row.median);
+    row.twentyfive = parseFloat(row.twentyfive);
+    row.seventyfive = parseFloat(row.seventyfive);
     row.pct = 100/row.median;
     row.pct25 = 100/row.twentyfive;
     row.pct75 = 100/row.seventyfive;
@@ -124,15 +126,6 @@ d3.csv("summary.csv", function(error, csv) {
 
   var imgsize = 20;
 
-  // chart.selectAll(".teamname")
-  //    .data(data)
-  //  .enter().append("text")
-  //      .attr("class", "teamname")
-  //      .attr("x", function(d) { return x(d.country) + x.rangeBand()/2; })
-  //      .attr("y", function(d) { return height - y(d.pct); })
-  //      .attr("text-anchor", "middle")
-  //      .text(function(d) { return d.name; })
-  //      .style("font", "12px sans-serif");
   chart.selectAll("image")
       .data(data)
     .enter().append("svg:image")
@@ -145,8 +138,8 @@ d3.csv("summary.csv", function(error, csv) {
   // create a formatting function. floats get 2 digits after decimal
   fmt = d3.format(".2f");
 
-  $('.teamname').tipsy({
-    gravity: 'w',
+  $('image').tipsy({
+    gravity: 'n',
     html: true,
     title: function() {
       var d = this.__data__;
