@@ -51,9 +51,12 @@ d3.csv("summary.csv", function(error, csv) {
     row.max = parseFloat(row.max);
     row.mean = parseFloat(row.mean);
     row.median = parseFloat(row.median);
+    row.twentyfive = parseFloat(row.twentyfive);
+    row.seventyfive = parseFloat(row.seventyfive);
     row.group = row.group.toUpperCase();
     row.pct = 100/row.median;
-    //TODO: 25th and 75th
+    row.pct25 = 100/row.twentyfive;
+    row.pct75 = 100/row.seventyfive;
     data.push(row);
   });
   console.log(data);
@@ -122,14 +125,14 @@ d3.csv("summary.csv", function(error, csv) {
   fmt = d3.format(".2f");
 
   $('svg image').tipsy({
-    gravity: 'w',
+    gravity: 'n',
     html: true,
     title: function() {
       var d = this.__data__;
       return '<span style="font: 14px sans-serif"><strong>' + d.name + '</strong><br><br>' +
       'Median: ' + fmt(d.pct) + '%<br>' +
-      'Max: ' + fmt(100/d.min) + '%<br>' + // Max odds == min win %, ya dig?
-      'Min: ' + fmt(100/d.max) + '%<br>' +
+      '75th Percentile: ' + fmt(d.pct25) + '%<br>' + // Max odds == min win %, ya dig?
+      '25th Percentile: ' + fmt(d.pct75) + '%<br>' +
       '</span>';
     }
   });
