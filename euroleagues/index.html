@@ -27,7 +27,7 @@ body {
 <!--<script src="box.js"></script>-->
 <script>
 
-var width = 600,
+var width = 800,
     height = 300,
     mx = 30, //x margin
     my = 25; //y margin
@@ -59,7 +59,7 @@ d3.csv("summary.csv", function(error, csv) {
   });
   console.log(data);
 
-  var countries = ['Germany', 'Spain', 'England', 'France', 'Italy', 'Scotland', 'Brazil'];
+  var countries = ['Germany', 'Spain', 'England', 'France', 'Italy', 'Scotland', 'Holland', 'Turkey', 'Portugal', 'Brazil'];
 
   var xscale = d3.scale.ordinal()
       .domain(countries)
@@ -120,6 +120,10 @@ d3.csv("summary.csv", function(error, csv) {
     "goiasgo": "goias",
     "santossp": "santos",
     "nauticope": "nautico",
+    "psveindhoven": "psv",
+    "azalkmaar": "az-alkmaar",
+    "porto": "fc-porto",
+    "sportinglisbon": "sporting-club"
   }
 
   function sanitize(x) {

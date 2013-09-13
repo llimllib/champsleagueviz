@@ -7,6 +7,9 @@ for country, urlpart in [('Germany', 'germany/bundesliga/german-bundesliga'),
                          ('France', 'france/ligue-1/french-ligue-1'),
                          ('Italy', 'italy/serie-a/italy-serie-a'),
                          ('Scotland', 'scottish/premiership'),
+                         ('Holland', 'other/netherlands/eredivisie/holland-eredivisie'),
+                         ('Portugal', 'other/portugal/primeira-liga/portuguese-super-liga'),
+                         ('Turkey', 'other/turkey/super-lig/turkish-super-league'),
                          ('Brazil', 'world/brazil/serie-a/brazil-serie-a')]:
     url = "http://www.oddschecker.com/football/%s/winner" % urlpart
     print "getting %s" % url
