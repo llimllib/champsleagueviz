@@ -10,8 +10,9 @@ push:
 update:
 	python dl.py
 	python stats.py
+	cd leaguewinners && make update
 	git add raw/*
-	git commit -m "update data" raw/* summary.csv
+	git commit -m "update champsleague data" raw/* summary.csv
 	make push
 
 .PHONY: serve push
