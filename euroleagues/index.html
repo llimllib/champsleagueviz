@@ -23,8 +23,8 @@ body {
 <!--<script src="box.js"></script>-->
 <script>
 
-var width = 800,
-    height = 400,
+var width = 400,
+    height = 300,
     mx = 30, //x margin
     my = 25; //y margin
 
@@ -44,6 +44,8 @@ d3.csv("summary.csv", function(error, csv) {
     row.mean = parseFloat(row.mean);
     row.median = parseFloat(row.median);
     row.pct = 100/row.median;
+    row.pct25 = 100/row.twentyfive;
+    row.pct75 = 100/row.seventyfive;
     //TODO: 25th and 75th
     if (row.pct > 3) {
       data.push(row);
@@ -96,29 +98,49 @@ d3.csv("summary.csv", function(error, csv) {
       .style("font", "12px sans-serif")
       .text(String);
 
-  function sanitize(x) {
-    return x.replace(/ /g, "").toLowerCase() + ".png";
+  var replacements = {
+    "bayernmunich": "bayern-munich",
+    "bordortmund": "borussia-dortmund",
+    "bayerleverkusen": "bayer-leverkusen",
+    "realmadrid": "real-madrid",
+    "mancity": "man-city",
+    "manutd": "man-utd",
+    "psg": "paris-sg",
+    "acmilan": "ac-milan",
+    "corinthianssp": "corinthians",
+    "internacionalrs": "internacional",
+    "atleticopr": "atletico-mineiro",
+    "botafogorj": "botafogo",
+    "goiasgo": "goias",
   }
 
-  var imgsize = 50;
+  function sanitize(x) {
+    var safe = x.replace(/ /g, "").toLowerCase();
+    if (replacements.hasOwnProperty(safe)) {
+      safe = replacements[safe];
+    }
+    return safe + ".png";
+  }
 
-   chart.selectAll(".teamname")
-      .data(data)
-    .enter().append("text")
-        .attr("class", "teamname")
-        .attr("x", function(d) { return x(d.country) + x.rangeBand()/2; })
-        .attr("y", function(d) { return height - y(d.pct); })
-        .attr("text-anchor", "middle")
-        .text(function(d) { return d.name; })
-        .style("font", "12px sans-serif");
-  //chart.selectAll("image")
+  var imgsize = 20;
+
+  // chart.selectAll(".teamname")
   //    .data(data)
-  //  .enter().append("svg:image")
-  //    .attr("x", function(d) { return x(d.country) + x.rangeBand()/2 - (imgsize/2); })
-  //    .attr("y", function(d) { return height - y(d.pct) - (imgsize/2); })
-  //    .attr("width", imgsize)
-  //    .attr("height", imgsize)
-  //    .attr("xlink:href", function(d) { return "http://billmill.org/champsleagueviz/crests/" + sanitize(d.name); });
+  //  .enter().append("text")
+  //      .attr("class", "teamname")
+  //      .attr("x", function(d) { return x(d.country) + x.rangeBand()/2; })
+  //      .attr("y", function(d) { return height - y(d.pct); })
+  //      .attr("text-anchor", "middle")
+  //      .text(function(d) { return d.name; })
+  //      .style("font", "12px sans-serif");
+  chart.selectAll("image")
+      .data(data)
+    .enter().append("svg:image")
+      .attr("x", function(d) { return x(d.country) + x.rangeBand()/2 - (imgsize/2); })
+      .attr("y", function(d) { return height - y(d.pct) - (imgsize/2); })
+      .attr("width", imgsize)
+      .attr("height", imgsize)
+      .attr("xlink:href", function(d) { return "crests/" + sanitize(d.name); });
 
   // create a formatting function. floats get 2 digits after decimal
   fmt = d3.format(".2f");
@@ -130,8 +152,8 @@ d3.csv("summary.csv", function(error, csv) {
       var d = this.__data__;
       return '<span style="font: 14px sans-serif"><strong>' + d.name + '</strong><br><br>' +
       'Median: ' + fmt(d.pct) + '%<br>' +
-      'Max: ' + fmt(100/d.min) + '%<br>' + // Max odds == min win %, ya dig?
-      'Min: ' + fmt(100/d.max) + '%<br>' +
+      '25th: ' + fmt(d.pct25) + '%<br>' + // Max odds == min win %, ya dig?
+      '75th: ' + fmt(d.pct75) + '%<br>' +
       '</span>';
     }
   });
