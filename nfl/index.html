@@ -99,6 +99,17 @@ d3.csv("summary.csv", function(error, csv) {
       .style("font", "12px sans-serif")
       .text(String);
 
+  // x axis ticks
+  chart.selectAll(".xaxistick")
+      .data(groups.slice(1))
+    .enter().append("line")
+      .attr("class", "xaxistick")
+      .attr("x1", function(d) { return xscale(d); })
+      .attr("x2", function(d) { return xscale(d); })
+      .attr("y1", function() { return my; })
+      .attr("y2", function(d) { return height; })
+      .style("stroke", "#f6f6f6");
+
   function sanitize(x) {
     var sane = x.replace(/ /g, "").toLowerCase() + ".svg";
     if (sane.indexOf("vikings") != -1) { sane = sane.replace(/\.svg/, ".png"); }
@@ -113,9 +124,9 @@ d3.csv("summary.csv", function(error, csv) {
     var x = xscale(d.group) + xscale.rangeBand()/2 - (imgsize/2);
     if (i > 0 && Math.abs(y(data[i-1].pct) - y(d.pct)) < 20) {
       if (offset == 0) {
-        offset += imgsize;
+        offset += imgsize/1.5;
       } else if (offset > 0) {
-        offset = -imgsize;
+        offset = -imgsize/1.5;
       } else {
         offset = 0;
       }
