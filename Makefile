@@ -14,6 +14,7 @@ update:
 	cd nfl && make update
 	git add raw/*
 	git commit -m "update champsleague data" raw/* summary.csv
+	git push
 	make push
 
 .PHONY: serve push
