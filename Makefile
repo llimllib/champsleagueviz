@@ -2,9 +2,9 @@ serve:
 	python -m SimpleHTTPServer
 
 push:
-	git checkout gh-pages
-	git rebase -s recursive -X theirs master
-	git push --force
+	git branch -D gh-pages
+	git checkout -b gh-pages
+	git push -f -u origin gh-pages
 	git checkout master
 
 update:
