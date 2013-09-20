@@ -11,6 +11,7 @@ update:
 	python dl.py
 	python stats.py
 	cd leaguewinners && make update
+	cd europa && make update
 	cd nfl && make update
 	git add raw/*
 	git commit -m "update champsleague data" raw/* summary.csv
