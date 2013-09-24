@@ -152,7 +152,9 @@ d3.csv("summary.csv", function(error, csv) {
 
   function xx(d, i) {
     var x = xscale(d.country) + xscale.rangeBand()/2 - (imgsize/2);
-    if (i > 0 && Math.abs(y(data[i-1].pct) - y(d.pct)) < 20) {
+    if (i > 0 &&
+        xscale(data[i-1].country) == xscale(d.country) &&
+        Math.abs(y(data[i-1].pct) - y(d.pct)) < 20) {
       if (offset == 0) {
         offset += imgsize;
       } else if (offset > 0) {
