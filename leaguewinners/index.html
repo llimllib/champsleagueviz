@@ -65,7 +65,7 @@ d3.csv("summary.csv", function(error, csv) {
     row.pct25 = 100/row.twentyfive;
     row.pct75 = 100/row.seventyfive;
     //TODO: 25th and 75th
-    if (row.pct > 3) {
+    if (row.pct > 4) {
       data.push(row);
     }
   });
