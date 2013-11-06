@@ -2,10 +2,15 @@ import re, requests, csv, time
 
 teams = []
 for group in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']:
-    r = requests.get("http://www.oddschecker.com/football/champions-league/champions-league-group-%s/to-qualify" % group,
-                     cookies={"odds_type":"decimal"})
+    url = "http://www.oddschecker.com/football/champions-league/champions-league-group-%s/to-qualify" % group
+    print "getting url %s" % url
+    r = requests.get(url, cookies={"odds_type":"decimal"})
 
-    table = re.search("<table.*?eventTable.*?</table>", r.text, re.DOTALL).group()
+    try:
+        table = re.search("<table.*?eventTable.*?</table>", r.text, re.DOTALL).group()
+    except AttributeError:
+        print "unable to parse url %s" % url
+        continue
 
     sitesrow = re.search("<tr.*?eventTableHeader.*?</tr>", table, re.DOTALL).group()
     sites = re.findall('<a.*?title="(.*?)"', sitesrow)

@@ -2,8 +2,9 @@ import re, requests, csv, time
 
 teams = []
 for group in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']:
-    r = requests.get("http://www.oddschecker.com/football/champions-league/champions-league-group-%s/winner" % group,
-                     cookies={"odds_type":"decimal"})
+    url = "http://www.oddschecker.com/football/champions-league/champions-league-group-%s/winner" % group
+    r = requests.get(url, cookies={"odds_type":"decimal"})
+    print "got %s" % url
 
     table = re.search("<table.*?eventTable.*?</table>", r.text, re.DOTALL).group()
 
