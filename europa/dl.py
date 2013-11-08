@@ -5,7 +5,12 @@ for group in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']:
     r = requests.get("http://www.oddschecker.com/football/europa-league/europa-league-group-%s/winner" % group,
                      cookies={"odds_type":"decimal"})
 
-    table = re.search("<table.*?eventTable.*?</table>", r.text, re.DOTALL).group()
+
+    try:
+        table = re.search("<table.*?eventTable.*?</table>", r.text, re.DOTALL).group()
+    except AttributeError:
+        print "unable to parse url %s" % url
+        continue
 
     sitesrow = re.search("<tr.*?eventTableHeader.*?</tr>", table, re.DOTALL).group()
     sites = re.findall('<a.*?title="(.*?)"', sitesrow)

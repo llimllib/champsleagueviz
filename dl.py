@@ -6,7 +6,11 @@ for group in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']:
     r = requests.get(url, cookies={"odds_type":"decimal"})
     print "got %s" % url
 
-    table = re.search("<table.*?eventTable.*?</table>", r.text, re.DOTALL).group()
+    try:
+        table = re.search("<table.*?eventTable.*?</table>", r.text, re.DOTALL).group()
+    except AttributeError:
+        print "unable to parse url %s" % url
+        continue
 
     sitesrow = re.search("<tr.*?eventTableHeader.*?</tr>", table, re.DOTALL).group()
     sites = re.findall('<a.*?title="(.*?)"', sitesrow)
