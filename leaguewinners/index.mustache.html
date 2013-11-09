@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<title>League Winner Probability</title>
+<link rel="stylesheet" href="http://billmill.org/css/960css/reset.css" />
+<link rel="stylesheet" href="http://billmill.org/css/960css/960.css" />
+<link rel="stylesheet" href="http://billmill.org/css/style.css" />
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 800px;
+}
+#chart {
+  margin: 20px;
+}
+#seealso {
+  margin-top: 40px;
+}
+#lastupdated {
+  font-style: italic;
+  font-size: 80%;
+}
+</style>
+</head>
+<body>
+<div class="container_16">
+    <div class="grid_3">
+        <a href="http://billmill.org"><img src="http://billmill.org/images/logo.png" width="136" height="94"></a>
+    </div>
+    <div class="clear"></div>
+
+    <div class="grid_13 prefix_3 content">
+
+<h1>League Winner Probability</h1>
+<p>Each team is placed on the chart by the median probability that they will win their league. Only teams with a &gt;4% chance of winning their league are included.
+<div id="chart"></div>
+<p>This chart is automatically generated from the odds available at <a href="http://www.oddschecker.com/football/english/premier-league/winner">oddschecker</a>, and will be periodically updated. If you want to see the code used to download the data and generate the chart, head over to <a href="https://github.com/llimllib/champsleagueviz/tree/master/leaguewinners">github</a> and check it out.
+<p id="seealso">See also: <a href="../">CL Group Winner</a> &bull; <a href="../qualify/">CL Qualification</a> &bull; <a href="../europa/index.html">Europa league</a> &bull; <a href="nfl/">NFL</a>
+<p id="lastupdated">page updated {{ last_updated }}
+</div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../tipsy/javascripts/jquery.tipsy.js"></script>
+<link href="../tipsy/stylesheets/tipsy.css" rel="stylesheet" type="text/css" />
+
+<script>
+
+var width = 800,
+    height = 300,
+    mx = 30, //x margin
+    my = 25; //y margin
+
+var chart = d3.select("#chart").append("svg")
+    .attr("class", "chart")
+    .attr("width", width + 2*mx)
+    .attr("height", height + 2*my)
+  .append("g")
+    .attr("transform", "translate(" + mx + "," + my + ")");
+
+d3.csv("summary.csv", function(error, csv) {
+  var data = [];
+
+  csv.forEach(function(row) {
+    row.min = parseFloat(row.min);
+    row.max = parseFloat(row.max);
+    row.mean = parseFloat(row.mean);
+    row.median = parseFloat(row.median);
+    row.twentyfive = parseFloat(row.twentyfive);
+    row.seventyfive = parseFloat(row.seventyfive);
+    row.pct = 100/row.median;
+    row.pct25 = 100/row.twentyfive;
+    row.pct75 = 100/row.seventyfive;
+    //TODO: 25th and 75th
+    if (row.pct > 4) {
+      data.push(row);
+    }
+  });
+
+  var countries = ['Germany', 'Spain', 'England', 'France', 'Italy', 'Scotland', 'Holland', 'Turkey', 'Portugal'];
+
+  var xscale = d3.scale.ordinal()
+      .domain(countries)
+      .rangeBands([0, width])
+
+  var y = d3.scale.linear()
+    .domain([1, 100])
+    .range([0, height])
+
+  // y axis ticks
+  chart.selectAll(".yaxistick")
+      .data(y.ticks(10).slice(0,10)) //omit 100
+    .enter().append("line")
+      .attr("class", "yaxistick")
+      .attr("x1", 0)
+      .attr("x2", width)
+      .attr("y1", function(d) { return height - y(d); })
+      .attr("y2", function(d) { return height - y(d); })
+      .style("stroke", "#f6f6f6");
+
+  // y axis labels
+  chart.selectAll(".yaxislabel")
+      .data(y.ticks(10).slice(0,10)) //omit 100
+    .enter().append("text")
+      .attr("class", "yaxislabel")
+      .attr("x", 0)
+      .attr("y", function(d) { return height - y(d) + 3; })
+      .attr("dx", -10)
+      .attr("text-anchor", "middle")
+      .style("fill", "#ccc")
+      .style("font", "10px sans-serif")
+      .text(String);
+
+  // x axis labels
+  chart.selectAll(".xaxislabel")
+      .data(countries)
+    .enter().append("text")
+      .attr("class", "xaxislabel")
+      .attr("x", function(d) { return xscale(d) + xscale.rangeBand()/2; })
+      .attr("y", function() { return my-40; })
+      .attr("text-anchor", "middle")
+      .style("font", "12px sans-serif")
+      .text(String);
+
+  var replacements = {
+    "bayernmunich": "bayern-munich",
+    "bordortmund": "borussia-dortmund",
+    "bayerleverkusen": "bayer-leverkusen",
+    "realmadrid": "real-madrid",
+    "mancity": "man-city",
+    "manutd": "man-utd",
+    "psg": "paris-sg",
+    "acmilan": "ac-milan",
+    "corinthianssp": "corinthians",
+    "internacionalrs": "internacional",
+    "atleticopr": "atletico-mineiro",
+    "botafogorj": "botafogo",
+    "goiasgo": "goias",
+    "santossp": "santos",
+    "nauticope": "nautico",
+    "psveindhoven": "psv",
+    "azalkmaar": "az-alkmaar",
+    "porto": "fc-porto",
+    "sportinglisbon": "sporting-club",
+    "atleticomadrid": "atletico-madrid",
+    "atleticomineiro": "atletico-mineiro",
+  }
+
+  function sanitize(x) {
+    var safe = x.replace(/ /g, "").toLowerCase();
+    if (replacements.hasOwnProperty(safe)) {
+      safe = replacements[safe];
+    }
+    return safe + ".png";
+  }
+
+  var imgsize = 20;
+  var offset = 0;
+
+  function xx(d, i) {
+    var x = xscale(d.country) + xscale.rangeBand()/2 - (imgsize/2);
+    if (i > 0 &&
+        xscale(data[i-1].country) == xscale(d.country) &&
+        Math.abs(y(data[i-1].pct) - y(d.pct)) < 20) {
+      if (offset == 0) {
+        offset += imgsize;
+      } else if (offset > 0) {
+        offset = -imgsize;
+      } else {
+        offset = 0;
+      }
+    }
+    else {
+      offset = 0;
+    }
+    return x + offset;
+  }
+
+  chart.selectAll("image")
+      .data(data)
+    .enter().append("svg:image")
+      .attr("x", xx)
+      .attr("y", function(d) { return height - y(d.pct) - (imgsize/2); })
+      .attr("width", imgsize)
+      .attr("height", imgsize)
+      .attr("xlink:href", function(d) { return "crests/" + sanitize(d.name); });
+
+  // create a formatting function. floats get 2 digits after decimal
+  fmt = d3.format(".2f");
+
+  $('image').tipsy({
+    gravity: 'n',
+    html: true,
+    title: function() {
+      var d = this.__data__;
+      return '<span style="font: 14px sans-serif"><strong>' + d.name + '</strong><br><br>' +
+      'Median: ' + fmt(d.pct) + '%<br>' +
+      '25th: ' + fmt(d.pct25) + '%<br>' + // Max odds == min win %, ya dig?
+      '75th: ' + fmt(d.pct75) + '%<br>' +
+      '</span>';
+    }
+  });
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4514581-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<a href="https://github.com/llimllib/champsleagueviz"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+</body>
