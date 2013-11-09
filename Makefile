@@ -2,7 +2,7 @@ serve:
 	python -m SimpleHTTPServer
 
 deploy:
-	sync --exclude '.git' -avuz . llimllib@hubvan.com:~/champsleague/
+	ssh llimllib@hubvan.com "cd champsleagueviz && git pull"
 
 push:
 	git branch -D gh-pages
