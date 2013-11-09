@@ -1,4 +1,4 @@
-import glob, csv, re, shutil
+import glob, csv, re, shutil, time, mustache
 import numpy as np
 
 oddsfile = list(sorted(glob.glob('raw/odds*.csv')))[-1]
@@ -40,3 +40,9 @@ with file(summaryfile, 'w') as outfile:
         w.writerow(row)
 
 shutil.copy2(summaryfile, "summary.csv")
+
+last_updated = time.strftime("%b %d %Y %H:%M")
+
+context = {"last_updated": last_updated}
+out = mustache.render(file("index.mustache.html").read(), context)
+file("index.html", 'w').write(out)
