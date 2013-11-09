@@ -24,7 +24,11 @@ teams = fixed
 summary = []
 for team in teams:
     odds = team[2:]
-    max_ = max(odds)
+    try:
+        max_ = max(odds)
+    except ValueError:
+        #nobody is offering odds on this team, they're eliminated, skip them
+        continue
     min_ = min(odds)
     mean = np.mean(odds)
     median = np.median(odds)

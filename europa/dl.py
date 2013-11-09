@@ -22,6 +22,7 @@ def parse_teamrows(teamrows):
         teams.append(parse_team(teamrow))
     return teams
 
+teams = []
 for group in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']:
     url = "http://www.oddschecker.com/football/europa-league/europa-league-group-%s/winner" % group
     print "getting %s" % url
@@ -37,7 +38,8 @@ for group in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']:
     sites = re.findall('<a.*?title="(.*?)"', sitesrow)
 
     teamrows = re.findall(r'<tr class="eventTableRow.*?</tr>', table, re.DOTALL)
-    teams = parse_teamrows(teamrows)
+    teams += parse_teamrows(teamrows)
+    print teams
 
 t = str(time.time()).split(".")[0]
 with file("raw/odds%s.csv" % t, 'w') as outfile:
