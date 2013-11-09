@@ -1,10 +1,31 @@
 import re, requests, csv, time
 
-teams = []
-for group in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']:
-    r = requests.get("http://www.oddschecker.com/football/europa-league/europa-league-group-%s/winner" % group,
-                     cookies={"odds_type":"decimal"})
+def parse_team(teamrow):
+    cols = re.findall("<td.*?>(.*?)<", teamrow)
+    name = cols[1]
+    odds = []
+    for c in cols[3:]:
+        if not c: odds.append(None)
+        else:
+            try:
+                odds.append(float(c))
+            except ValueError:
+                print "can't parse col c {0}, skipping".format(c)
+                odds.append(None)
+    assert len(odds) == len(sites)
+    print name, odds
+    return [name, group] + odds
 
+def parse_teamrows(teamrows):
+    teams = []
+    for teamrow in teamrows:
+        teams.append(parse_team(teamrow))
+    return teams
+
+for group in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']:
+    url = "http://www.oddschecker.com/football/europa-league/europa-league-group-%s/winner" % group
+    print "getting %s" % url
+    r = requests.get(url, cookies={"odds_type":"decimal"})
 
     try:
         table = re.search("<table.*?eventTable.*?</table>", r.text, re.DOTALL).group()
@@ -16,16 +37,7 @@ for group in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l']:
     sites = re.findall('<a.*?title="(.*?)"', sitesrow)
 
     teamrows = re.findall(r'<tr class="eventTableRow.*?</tr>', table, re.DOTALL)
-    for row in teamrows:
-        cols = re.findall("<td.*?>(.*?)<", row)
-        name = cols[1]
-        odds = []
-        for c in cols[3:]:
-            if not c: odds.append(None)
-            else:     odds.append(float(c))
-        assert len(odds) == len(sites)
-        print name, odds
-        teams.append([name, group] + odds)
+    teams = parse_teamrows(teamrows)
 
 t = str(time.time()).split(".")[0]
 with file("raw/odds%s.csv" % t, 'w') as outfile:
