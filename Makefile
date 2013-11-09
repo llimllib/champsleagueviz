@@ -1,6 +1,9 @@
 serve:
 	python -m SimpleHTTPServer
 
+deploy:
+	sync --exclude '.git' -avuz . llimllib@hubvan.com:~/champsleague/
+
 push:
 	git branch -D gh-pages
 	git checkout -b gh-pages
@@ -19,4 +22,4 @@ update:
 	git push
 	make push
 
-.PHONY: serve push
+.PHONY: serve push deploy update
