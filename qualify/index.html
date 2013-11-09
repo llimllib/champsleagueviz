@@ -2,6 +2,9 @@
 <meta charset="utf-8">
 <head>
 <title>Champions League Qualification Probability</title>
+<link rel="stylesheet" href="http://billmill.org/css/960css/reset.css" />
+<link rel="stylesheet" href="http://billmill.org/css/960css/960.css" />
+<link rel="stylesheet" href="http://billmill.org/css/style.css" />
 <style>
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -13,9 +16,20 @@ body {
 </style>
 </head>
 <body>
+<div class="container_16">
+    <div class="grid_3">
+        <a href="http://billmill.org"><img src="http://billmill.org/images/logo.png" width="136" height="94"></a>
+    </div>
+    <div class="clear"></div>
+
+    <div class="grid_13 prefix_3 content">
 <h1>Champions League Group Qualification Probability</h1>
 <p>Each team is placed here by the median probability, via <a href="http://www.oddschecker.com/football/champions-league/champions-league-group-h/to-qualify">oddschecker</a>, that it will qualify from its Champions League Group.
 <div id="chart"></div>
+
+<p id="seealso">See also: <a href="../qualify/">CL Group Winner</a> &bull; <a href="../europa/index.html">Europa league</a> &bull; <a href="../leaguewinners/">European League Winner</a> &bull; <a href="../nfl/">NFL</a>
+
+</div>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="../tipsy/javascripts/jquery.tipsy.js"></script>
@@ -57,13 +71,15 @@ d3.csv("summary.csv", function(error, csv) {
       .domain(groups)
       .rangeBands([0, width])
 
+  var paddingy = 20;
+
   var y = d3.scale.linear()
     .domain([0, 100])
-    .range([0, height])
+    .range([0, height-paddingy])
 
   // y axis ticks
   chart.selectAll(".yaxistick")
-      .data(y.ticks(10).slice(0,10)) //omit 100
+      .data(y.ticks(10))
     .enter().append("line")
       .attr("class", "yaxistick")
       .attr("x1", 0)
@@ -74,7 +90,7 @@ d3.csv("summary.csv", function(error, csv) {
 
   // y axis labels
   chart.selectAll(".yaxislabel")
-      .data(y.ticks(10).slice(0,10)) //omit 100
+      .data(y.ticks(10))
     .enter().append("text")
       .attr("class", "yaxislabel")
       .attr("x", 0)
