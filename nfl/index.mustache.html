@@ -84,13 +84,15 @@ d3.csv("summary.csv", function(error, csv) {
       .domain(groups)
       .rangeBands([0, width])
 
+  var paddingy = 30;
+
   var y = d3.scale.linear()
     .domain([0, 100])
-    .range([0, height])
+    .range([0, height-paddingy])
 
   // y axis ticks
   chart.selectAll(".yaxistick")
-      .data(y.ticks(10).slice(0,10)) //omit 100
+      .data(y.ticks(10))
     .enter().append("line")
       .attr("class", "yaxistick")
       .attr("x1", 0)
@@ -101,7 +103,7 @@ d3.csv("summary.csv", function(error, csv) {
 
   // y axis labels
   chart.selectAll(".yaxislabel")
-      .data(y.ticks(10).slice(0,10)) //omit 100
+      .data(y.ticks(10))
     .enter().append("text")
       .attr("class", "yaxislabel")
       .attr("x", 0)
