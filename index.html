@@ -36,13 +36,12 @@ body {
 <script src="tipsy/javascripts/jquery.tipsy.js"></script>
 <link href="tipsy/stylesheets/tipsy.css" rel="stylesheet" type="text/css" />
 
-<!--<script src="box.js"></script>-->
 <script>
 
 var width = 800,
     height = 400,
     mx = 30, //x margin
-    my = 15; //y margin
+    my = 25; //y margin
 
 var chart = d3.select("#chart").append("svg")
     .attr("class", "chart")
@@ -74,13 +73,15 @@ d3.csv("summary.csv", function(error, csv) {
       .domain(groups)
       .rangeBands([0, width])
 
+  var paddingy = 20;
+
   var y = d3.scale.linear()
     .domain([0, 100])
-    .range([0, height])
+    .range([0, height-paddingy])
 
   // y axis ticks
   chart.selectAll(".yaxistick")
-      .data(y.ticks(10).slice(0,10)) //omit 100
+      .data(y.ticks(10))
     .enter().append("line")
       .attr("class", "yaxistick")
       .attr("x1", 0)
@@ -91,7 +92,7 @@ d3.csv("summary.csv", function(error, csv) {
 
   // y axis labels
   chart.selectAll(".yaxislabel")
-      .data(y.ticks(10).slice(0,10)) //omit 100
+      .data(y.ticks(10))
     .enter().append("text")
       .attr("class", "yaxislabel")
       .attr("x", 0)
@@ -108,7 +109,7 @@ d3.csv("summary.csv", function(error, csv) {
     .enter().append("text")
       .attr("class", "xaxislabel")
       .attr("x", function(d) { return x(d) + x.rangeBand()/2; })
-      .attr("y", function() { return my-10; })
+      .attr("y", function() { return my-40; })
       .attr("text-anchor", "middle")
       .style("font", "12px sans-serif")
       .text(String);
