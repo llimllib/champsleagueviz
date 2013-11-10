@@ -18,7 +18,7 @@ update:
 	cd nfl && make update
 	cd qualify && make update
 	git add raw/*
-	git commit -m "update champsleague data" raw/* summary.csv
+	git commit -m "update champsleague data" raw/* summary.csv index.html
 	git push
 	make push
 
