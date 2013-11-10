@@ -38,7 +38,7 @@ body {
 <p>The data from oddschecker is downloaded periodically and will be kept refreshed througout the season. If you want to see the code used to download the data and generate the chart, head over to <a href="https://github.com/llimllib/champsleagueviz/tree/master/nfl">github</a> and check it out.
 <p id="seealso">See also: <a href="../">Champions League Group Winner</a> &bull; <a href="../qualify/">CL Qualification</a> &bull; <a href="../europa/index.html">Europa league</a> &bull; <a href="../leaguewinners">European League Winner</a>
 
-<p id="lastupdated">page updated Nov 09 2013 16:40
+<p id="lastupdated">page updated Nov 10 2013 01:53
 </div>
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -84,13 +84,15 @@ d3.csv("summary.csv", function(error, csv) {
       .domain(groups)
       .rangeBands([0, width])
 
+  var paddingy = 30;
+
   var y = d3.scale.linear()
     .domain([0, 100])
-    .range([0, height])
+    .range([0, height-paddingy])
 
   // y axis ticks
   chart.selectAll(".yaxistick")
-      .data(y.ticks(10).slice(0,10)) //omit 100
+      .data(y.ticks(10))
     .enter().append("line")
       .attr("class", "yaxistick")
       .attr("x1", 0)
@@ -101,7 +103,7 @@ d3.csv("summary.csv", function(error, csv) {
 
   // y axis labels
   chart.selectAll(".yaxislabel")
-      .data(y.ticks(10).slice(0,10)) //omit 100
+      .data(y.ticks(10))
     .enter().append("text")
       .attr("class", "yaxislabel")
       .attr("x", 0)
