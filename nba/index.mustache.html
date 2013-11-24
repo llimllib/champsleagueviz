@@ -114,6 +114,11 @@ d3.csv("summary.csv", function(error, csv) {
       .style("font", "10px sans-serif")
       .text(String);
 
+  function title(x) {
+    console.log("x is: ", x);
+    return x[0].toUpperCase() + x.slice(1);
+  }
+
   // x axis labels
   chart.selectAll(".xaxislabel")
       .data(groups)
@@ -123,18 +128,7 @@ d3.csv("summary.csv", function(error, csv) {
       .attr("y", function() { return my-10; })
       .attr("text-anchor", "middle")
       .style("font", "12px sans-serif")
-      .text(String);
-
-  // x axis ticks
-  chart.selectAll(".xaxistick")
-      .data(groups.slice(1))
-    .enter().append("line")
-      .attr("class", "xaxistick")
-      .attr("x1", function(d) { return xscale(d); })
-      .attr("x2", function(d) { return xscale(d); })
-      .attr("y1", function() { return my; })
-      .attr("y2", function(d) { return height; })
-      .style("stroke", "#f6f6f6");
+      .text(title);
 
   function sanitize(x) {
     var sane = x + ".svg";
