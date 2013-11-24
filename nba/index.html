@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+<head>
+<title>NBA Divisional Probability</title>
+<link rel="stylesheet" href="http://billmill.org/css/960css/reset.css" />
+<link rel="stylesheet" href="http://billmill.org/css/960css/960.css" />
+<link rel="stylesheet" href="http://billmill.org/css/style.css" />
+<style>
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 900px;
+}
+#chart {
+  margin: 20px;
+}
+#seealso {
+  margin-top: 40px;
+}
+#lastupdated {
+  font-style: italic;
+  font-size: 80%;
+}
+</style>
+</head>
+<body>
+<div class="container_16">
+    <div class="grid_3">
+        <a href="http://billmill.org"><img src="http://billmill.org/images/logo.png" width="136" height="94"></a>
+    </div>
+    <div class="clear"></div>
+
+    <div class="grid_13 prefix_3 content">
+
+<h1>NBA Divisional Probability</h1>
+<p>Each team is placed here by the median probability, via <a href="http://www.oddschecker.com/basketball/nba/northwest-division/winner">oddschecker</a>, that it will win its NBA Division.
+<div id="chart"></div>
+<p>The data from oddschecker is downloaded periodically and will be kept refreshed througout the season. If you want to see the code used to download the data and generate the chart, head over to <a href="https://github.com/llimllib/champsleagueviz/tree/master/nba">github</a> and check it out.
+<p id="seealso">See also: <a href="../">Champions League Group Winner</a> &bull; <a href="../qualify/">CL Qualification</a> &bull; <a href="../europa/index.html">Europa league</a> &bull; <a href="../leaguewinners">European League Winner</a> &bull; <a href="../nfl">NFL</a>
+
+<p id="lastupdated">page updated Nov 24 2013 14:44
+</div>
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="../tipsy/javascripts/jquery.tipsy.js"></script>
+<link href="../tipsy/stylesheets/tipsy.css" rel="stylesheet" type="text/css" />
+
+<!--<script src="box.js"></script>-->
+<script>
+
+var width = 800,
+    height = 400,
+    mx = 30, //x margin
+    my = 15; //y margin
+
+var chart = d3.select("#chart").append("svg")
+    .attr("class", "chart")
+    .attr("width", width + 2*mx)
+    .attr("height", height + 2*my)
+  .append("g")
+    .attr("transform", "translate(" + mx + "," + my + ")");
+
+d3.csv("summary.csv", function(error, csv) {
+  var data = [];
+
+  csv.forEach(function(row) {
+    row.min = parseFloat(row.min);
+    row.max = parseFloat(row.max);
+    row.mean = parseFloat(row.mean);
+    row.median = parseFloat(row.median);
+    row.twentyfive = parseFloat(row.twentyfive);
+    row.seventyfive = parseFloat(row.seventyfive);
+    row.group = row.division;
+    row.pct = 100/row.median;
+    row.pct25 = 100/row.twentyfive;
+    row.pct75 = 100/row.seventyfive;
+    data.push(row);
+  });
+
+  var groups = ['northwest', 'pacific', 'southwest', 'atlantic', 'central', 'southeast'];
+
+  var xscale = d3.scale.ordinal()
+      .domain(groups)
+      .rangeBands([0, width])
+
+  var paddingy = 30;
+
+  var y = d3.scale.linear()
+    .domain([0, 100])
+    .range([0, height-paddingy])
+
+  // y axis ticks
+  chart.selectAll(".yaxistick")
+      .data(y.ticks(10))
+    .enter().append("line")
+      .attr("class", "yaxistick")
+      .attr("x1", 0)
+      .attr("x2", width)
+      .attr("y1", function(d) { return height - y(d); })
+      .attr("y2", function(d) { return height - y(d); })
+      .style("stroke", "#f6f6f6");
+
+  // y axis labels
+  chart.selectAll(".yaxislabel")
+      .data(y.ticks(10))
+    .enter().append("text")
+      .attr("class", "yaxislabel")
+      .attr("x", 0)
+      .attr("y", function(d) { return height - y(d); })
+      .attr("dx", -10)
+      .attr("text-anchor", "middle")
+      .style("fill", "#ccc")
+      .style("font", "10px sans-serif")
+      .text(String);
+
+  // x axis labels
+  chart.selectAll(".xaxislabel")
+      .data(groups)
+    .enter().append("text")
+      .attr("class", "xaxislabel")
+      .attr("x", function(d) { return xscale(d) + xscale.rangeBand()/2; })
+      .attr("y", function() { return my-10; })
+      .attr("text-anchor", "middle")
+      .style("font", "12px sans-serif")
+      .text(String);
+
+  // x axis ticks
+  chart.selectAll(".xaxistick")
+      .data(groups.slice(1))
+    .enter().append("line")
+      .attr("class", "xaxistick")
+      .attr("x1", function(d) { return xscale(d); })
+      .attr("x2", function(d) { return xscale(d); })
+      .attr("y1", function() { return my; })
+      .attr("y2", function(d) { return height; })
+      .style("stroke", "#f6f6f6");
+
+  function sanitize(x) {
+    var sane = x + ".svg";
+    if (sane.indexOf("Knicks") != -1) { sane = sane.replace(/\.svg/, ".png"); }
+    if (sane.indexOf("Bobcat") != -1) { sane = sane.replace(/\.svg/, ".png"); }
+    if (sane.indexOf("Pelica") != -1) { sane = sane.replace(/\.svg/, ".png"); }
+    if (sane.indexOf("Magic") != -1) { sane = sane.replace(/\.svg/, ".png"); }
+    if (sane.indexOf("Suns") != -1) { sane = sane.replace(/\.svg/, ".png"); }
+    return sane;
+  }
+
+  var imgsize = 40;
+  var offset = 0;
+
+  function xx(d, i) {
+    var x = xscale(d.group) + xscale.rangeBand()/2 - (imgsize/2);
+    if (i > 0 && Math.abs(y(data[i-1].pct) - y(d.pct)) < 20) {
+      if (offset == 0) {
+        offset += imgsize/1.5;
+      } else if (offset > 0) {
+        offset = -imgsize/1.5;
+      } else {
+        offset = 0;
+      }
+    }
+    else {
+      offset = 0;
+    }
+    return x + offset;
+  }
+
+  chart.selectAll("image")
+      .data(data)
+    .enter().append("svg:image")
+      .attr("x", xx)
+      .attr("y", function(d) { return height - y(d.pct) - (imgsize/2); })
+      .attr("width", imgsize)
+      .attr("height", imgsize)
+      .attr("preserveAspectRatio", "xMidYMid")
+      .attr("xlink:href", function(d) { return "crests/" + sanitize(d.name); });
+
+  // create a formatting function. floats get 2 digits after decimal
+  fmt = d3.format(".2f");
+
+  $('svg image').tipsy({
+    gravity: 'n',
+    html: true,
+    title: function() {
+      var d = this.__data__;
+      return '<span style="font: 14px sans-serif"><strong>' + d.name + '</strong><br><br>' +
+      'Median: ' + fmt(d.pct) + '%<br>' +
+      '75th Percentile: ' + fmt(d.pct25) + '%<br>' + // Max odds == min win %, ya dig?
+      '25th Percentile: ' + fmt(d.pct75) + '%<br>' +
+      '</span>';
+    }
+  });
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-4514581-4']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<a href="https://github.com/llimllib/champsleagueviz"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+</body>
+</html>
