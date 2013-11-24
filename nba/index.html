@@ -38,7 +38,7 @@ body {
 <p>The data from oddschecker is downloaded periodically and will be kept refreshed througout the season. If you want to see the code used to download the data and generate the chart, head over to <a href="https://github.com/llimllib/champsleagueviz/tree/master/nba">github</a> and check it out.
 <p id="seealso">See also: <a href="../">Champions League Group Winner</a> &bull; <a href="../qualify/">CL Qualification</a> &bull; <a href="../europa/index.html">Europa league</a> &bull; <a href="../leaguewinners">European League Winner</a> &bull; <a href="../nfl">NFL</a>
 
-<p id="lastupdated">page updated Nov 24 2013 14:44
+<p id="lastupdated">page updated Nov 24 2013 15:37
 </div>
 
 <script src="http://d3js.org/d3.v3.min.js"></script>
@@ -101,6 +101,11 @@ d3.csv("summary.csv", function(error, csv) {
       .attr("y2", function(d) { return height - y(d); })
       .style("stroke", "#f6f6f6");
 
+  function title(x) {
+    console.log("x is: ", x);
+    return x[0].toUpperCase() + x.slice(1);
+  }
+
   // y axis labels
   chart.selectAll(".yaxislabel")
       .data(y.ticks(10))
@@ -113,7 +118,7 @@ d3.csv("summary.csv", function(error, csv) {
       .style("fill", "#ccc")
       .style("font", "10px sans-serif")
       .text(String);
-
+//function(d) { return title(d); }
   // x axis labels
   chart.selectAll(".xaxislabel")
       .data(groups)
@@ -123,18 +128,18 @@ d3.csv("summary.csv", function(error, csv) {
       .attr("y", function() { return my-10; })
       .attr("text-anchor", "middle")
       .style("font", "12px sans-serif")
-      .text(String);
+      .text(title);
 
   // x axis ticks
-  chart.selectAll(".xaxistick")
-      .data(groups.slice(1))
-    .enter().append("line")
-      .attr("class", "xaxistick")
-      .attr("x1", function(d) { return xscale(d); })
-      .attr("x2", function(d) { return xscale(d); })
-      .attr("y1", function() { return my; })
-      .attr("y2", function(d) { return height; })
-      .style("stroke", "#f6f6f6");
+  //chart.selectAll(".xaxistick")
+  //    .data(groups.slice(1))
+  //  .enter().append("line")
+  //    .attr("class", "xaxistick")
+  //    .attr("x1", function(d) { return xscale(d); })
+  //    .attr("x2", function(d) { return xscale(d); })
+  //    .attr("y1", function() { return my; })
+  //    .attr("y2", function(d) { return height; })
+  //    .style("stroke", "#f6f6f6");
 
   function sanitize(x) {
     var sane = x + ".svg";
