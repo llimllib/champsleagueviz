@@ -3,6 +3,6 @@ update:
 	python stats.py
 	python render.py
 	git add raw/*
-	git commit -m "update nfl data" raw/* summary.csv index.html
+	git commit -m "update nba data" raw/* summary.csv index.html
 
 .PHONY: update

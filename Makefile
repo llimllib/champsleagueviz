@@ -16,6 +16,7 @@ update:
 	cd leaguewinners && make update
 	cd europa && make update
 	cd nfl && make update
+	cd nba && make update
 	cd qualify && make update
 	git add raw/*
 	git commit -m "update champsleague data" raw/* summary.csv index.html
