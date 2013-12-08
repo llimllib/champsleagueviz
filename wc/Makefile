@@ -1,7 +1,7 @@
 update:
 	python dl.py
-	#TODO
-	#python stats.py
+	python stats.py
+	python render.py
 	git add raw/*
 	git commit -m "update world cup data" raw/*
 
