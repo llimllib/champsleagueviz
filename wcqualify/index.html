@@ -123,7 +123,7 @@ d3.csv("summary.csv", function(error, csv) {
       .attr("y", function() { return my-10; })
       .attr("text-anchor", "middle")
       .style("font", "12px sans-serif")
-      .text(String);
+      .text(function (d) { return d.toUpperCase(); });
 
   // x axis ticks
   //chart.selectAll(".xaxistick")
