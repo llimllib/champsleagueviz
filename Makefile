@@ -10,9 +10,14 @@ push:
 	git push -f -u origin gh-pages
 	git checkout master
 
-update:
+updatecl:
 	python dl.py
 	python stats.py
+	git add raw/*
+	git commit -m "update champsleague data" raw/* summary.csv index.html
+	git push
+
+update:
 	-cd leaguewinners && make update
 	-cd europa && make update
 	-cd nfl && make update
@@ -20,9 +25,7 @@ update:
 	-cd qualify && make update
 	-cd wc && make update
 	-cd wcqualify && make update
-	git add raw/*
-	git commit -m "update champsleague data" raw/* summary.csv index.html
-	git push
+	-make updatecl
 	make push
 
 .PHONY: serve push deploy update
