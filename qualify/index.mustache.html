@@ -45,11 +45,10 @@ body {
 
 <!--<script src="box.js"></script>-->
 <script>
-
 var width = 800,
     height = 400,
     mx = 30, //x margin
-    my = 30; //y margin
+    my = 25; //y margin
 
 var chart = d3.select("#chart").append("svg")
     .attr("class", "chart")
@@ -66,16 +65,18 @@ d3.csv("summary.csv", function(error, csv) {
     row.max = parseFloat(row.max);
     row.mean = parseFloat(row.mean);
     row.median = parseFloat(row.median);
+    row.twentyfive = parseFloat(row.twentyfive);
+    row.seventyfive = parseFloat(row.seventyfive);
     row.group = row.group.toUpperCase();
     row.pct = 100/row.median;
-    //TODO: 25th and 75th
+    row.pct25 = 100/row.twentyfive;
+    row.pct75 = 100/row.seventyfive;
     data.push(row);
   });
-  console.log(data);
 
   var groups = ["A", "B", "C", "D", "E", "F", "G", "H"]
 
-  var x = d3.scale.ordinal()
+  var xscale = d3.scale.ordinal()
       .domain(groups)
       .rangeBands([0, width])
 
@@ -114,8 +115,8 @@ d3.csv("summary.csv", function(error, csv) {
       .data(groups)
     .enter().append("text")
       .attr("class", "xaxislabel")
-      .attr("x", function(d) { return x(d) + x.rangeBand()/2; })
-      .attr("y", function() { return my-50; })
+      .attr("x", function(d) { return xscale(d) + xscale.rangeBand()/2; })
+      .attr("y", function() { return my-40; })
       .attr("text-anchor", "middle")
       .style("font", "12px sans-serif")
       .text(String);
@@ -125,11 +126,31 @@ d3.csv("summary.csv", function(error, csv) {
   }
 
   var imgsize = 50;
+  var offset = 0;
+
+  function xx(d, i) {
+    var x = xscale(d.group) + xscale.rangeBand()/2 - (imgsize/2);
+    if (i > 0 &&
+        xscale(data[i-1].group) == xscale(d.group) &&
+        Math.abs(y(data[i-1].pct) - y(d.pct)) < 40) {
+      if (offset == 0) {
+        offset += imgsize/3;
+      } else if (offset > 0) {
+        offset = -imgsize/3;
+      } else {
+        offset = 0;
+      }
+    }
+    else {
+      offset = 0;
+    }
+    return x + offset;
+  }
 
   chart.selectAll("image")
       .data(data)
     .enter().append("svg:image")
-      .attr("x", function(d) { return x(d.group) + x.rangeBand()/2 - (imgsize/2); })
+      .attr("x", xx)
       .attr("y", function(d) { return height - y(d.pct) - (imgsize/2); })
       .attr("width", imgsize)
       .attr("height", imgsize)
@@ -139,18 +160,19 @@ d3.csv("summary.csv", function(error, csv) {
   fmt = d3.format(".2f");
 
   $('svg image').tipsy({
-    gravity: 'w',
+    gravity: 'n',
     html: true,
     title: function() {
       var d = this.__data__;
       return '<span style="font: 14px sans-serif"><strong>' + d.name + '</strong><br><br>' +
       'Median: ' + fmt(d.pct) + '%<br>' +
-      'Max: ' + fmt(100/d.min) + '%<br>' + // Max odds == min win %, ya dig?
-      'Min: ' + fmt(100/d.max) + '%<br>' +
+      '75th Percentile: ' + fmt(d.pct25) + '%<br>' + // Max odds == min win %, ya dig?
+      '25th Percentile: ' + fmt(d.pct75) + '%<br>' +
       '</span>';
     }
   });
 });
+
 </script>
 <script type="text/javascript">
 
