@@ -78,7 +78,7 @@ d3.csv("summary.csv", function(error, csv) {
 
   var groups = ["A", "B", "C", "D", "E", "F", "G", "H"]
 
-  var x = d3.scale.ordinal()
+  var xscale = d3.scale.ordinal()
       .domain(groups)
       .rangeBands([0, width])
 
@@ -117,7 +117,7 @@ d3.csv("summary.csv", function(error, csv) {
       .data(groups)
     .enter().append("text")
       .attr("class", "xaxislabel")
-      .attr("x", function(d) { return x(d) + x.rangeBand()/2; })
+      .attr("x", function(d) { return xscale(d) + xscale.rangeBand()/2; })
       .attr("y", function() { return my-40; })
       .attr("text-anchor", "middle")
       .style("font", "12px sans-serif")
@@ -128,11 +128,32 @@ d3.csv("summary.csv", function(error, csv) {
   }
 
   var imgsize = 50;
+  var offset = 0;
+
+  function xx(d, i) {
+    var x = xscale(d.group) + xscale.rangeBand()/2 - (imgsize/2);
+    if (i > 0 &&
+        xscale(data[i-1].group) == xscale(d.group) &&
+        Math.abs(y(data[i-1].pct) - y(d.pct)) < 40) {
+      if (offset == 0) {
+        offset += imgsize/3;
+      } else if (offset > 0) {
+        offset = -imgsize/3;
+      } else {
+        offset = 0;
+      }
+    }
+    else {
+      offset = 0;
+    }
+    return x + offset;
+  }
 
   chart.selectAll("image")
       .data(data)
     .enter().append("svg:image")
-      .attr("x", function(d) { return x(d.group) + x.rangeBand()/2 - (imgsize/2); })
+      //.attr("x", function(d) { return x(d.group) + x.rangeBand()/2 - (imgsize/2); })
+      .attr("x", xx)
       .attr("y", function(d) { return height - y(d.pct) - (imgsize/2); })
       .attr("width", imgsize)
       .attr("height", imgsize)
