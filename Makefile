@@ -28,4 +28,4 @@ update:
 	-make updatecl
 	make push
 
-.PHONY: serve push deploy update
+.PHONY: serve push deploy update updatecl

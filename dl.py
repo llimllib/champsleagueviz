@@ -1,31 +1,40 @@
 import re, requests, csv, time
+from bs4 import BeautifulSoup
 
 teams = []
 for group in ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']:
-    url = "http://www.oddschecker.com/football/champions-league/champions-league-group-%s/winner" % group
-    r = requests.get(url, cookies={"odds_type":"decimal"})
-    print "got %s" % url
-
     try:
-        table = re.search("<table.*?eventTable.*?</table>", r.text, re.DOTALL).group()
-    except AttributeError:
-        print "unable to parse url %s" % url
-        continue
+        url = "http://www.oddschecker.com/football/champions-league/champions-league-group-%s/winner" % group
+        print "getting {}".format(url)
+        soup = BeautifulSoup(requests.get(url, cookies={"odds_type":"decimal"}).text)
 
-    sitesrow = re.search("<tr.*?eventTableHeader.*?</tr>", table, re.DOTALL).group()
-    sites = re.findall('<a.*?title="(.*?)"', sitesrow)
+        table = soup.find(attrs={"class":"eventTable"})
+        sitesrow = table.find_all("tr", {"class": "eventTableHeader"})
+        sitelinks = sitesrow[0].find_all(lambda t: t.has_attr("title"))
+        sites = [t["title"] for t in sitelinks]
 
-    teamrows = re.findall(r'<tr class="eventTableRow.*?</tr>', table, re.DOTALL)
-    for row in teamrows:
-        cols = re.findall("<td.*?>(.*?)<", row)
-        name = cols[1]
-        odds = []
-        for c in cols[3:]:
-            if not c: odds.append(None)
-            else:     odds.append(float(c))
-        assert len(odds) == len(sites)
-        print name, odds
-        teams.append([name, group] + odds)
+
+        teamrows = table.find_all(attrs={"class": "eventTableRow"})
+        for row in teamrows:
+            cols = [t.text for t in row.find_all("td")]
+            name = cols[1]
+
+            if 'any other' in name.lower(): continue
+
+            odds = []
+            isanodd = lambda t: (t.name=="td" and t.has_attr("class") and
+                                 ('o' in t.attrs["class"] or
+                                  'oi' in t.attrs["class"] or
+                                  'oo' in t.attrs["class"]))
+            rawodds = [t.text for t in row.find_all(isanodd)]
+            for o in rawodds:
+                if not o or '-' in o: odds.append(None)
+                else:                 odds.append(float(o))
+            assert len(odds) == len(sites), "{} {}".format(odds, sites)
+            teams.append([name, group] + odds)
+    except:
+        print "Unexpected error. skipping"
+        traceback.print_exc()
 
 t = str(time.time()).split(".")[0]
 with file("raw/odds%s.csv" % t, 'w') as outfile:
