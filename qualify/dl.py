@@ -1,4 +1,4 @@
-import re, requests, csv, time
+import re, requests, csv, time, traceback
 from bs4 import BeautifulSoup
 
 teams = []
